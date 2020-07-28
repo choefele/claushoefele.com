@@ -1,3 +1,5 @@
+// Adapted from https://github.com/chakra-ui/chakra-ui/blob/develop/website/src/components/mdx-components.js
+
 import React from "react"
 import {
   Box,
@@ -9,8 +11,7 @@ import {
   Alert,
   useColorModeValue,
 } from "@chakra-ui/core"
-// import CodeBlock from "./code-block"
-// import CarbonAd from "./carbon-ad"
+import CodeBlock from "./mdx-editor"
 
 const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
 
@@ -125,7 +126,7 @@ const MDXComponents = {
     />
   ),
   inlineCode: InlineCode,
-  // code: CodeBlock,
+  code: CodeBlock,
   pre: Pre,
   kbd: Kbd,
   br: (props) => <Box height="24px" {...props} />,
@@ -148,7 +149,6 @@ const MDXComponents = {
       {...props}
     />
   ),
-  // "carbon-ad": CarbonAd,
 }
 
 export default MDXComponents
