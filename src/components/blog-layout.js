@@ -8,6 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
+import MDXComponents from "./mdx-components"
 
 import Header from "./header"
 import "./layout.css"
@@ -33,7 +35,11 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <main>
+          <MDXProvider components={MDXComponents}>
+            {children}
+          </MDXProvider>
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
