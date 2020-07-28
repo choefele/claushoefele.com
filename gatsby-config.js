@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Claus Höfele`,
+    description: `Claus Höfele's website`,
+    author: `@claushoefele`,
   },
   plugins: [
     `gatsby-plugin-chakra-ui`,
@@ -12,6 +12,30 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/pages/blog/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          blog: require.resolve(`./src/components/blog-layout.js`),
+          default: require.resolve(`./src/components/layout.js`),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: false,
+            },
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,
