@@ -13,6 +13,9 @@ const Footer = () => (
     </Center>
     <Spacer />
     <HStack spacing="4" textTransform="uppercase">
+    <Center>
+        RSS
+      </Center>
       <Center>
         Privacy Policy
       </Center>
