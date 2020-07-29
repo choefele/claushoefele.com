@@ -1,36 +1,36 @@
 import * as React from "react"
-import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
+// import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 import {
   Box,
   Heading,
   Text,
   Container,
   Stack,
-  Avatar,
-  chakra,
-  Badge,
+  // Avatar,
+  // chakra,
+  // Badge,
 } from "@chakra-ui/core"
 import Layout from "../components/layout"
 
 // frontmatter > tags
 function BlogEntries() {
-  const { allMdx } = useStaticQuery(graphql`
-    query AllGuides {
-      allMdx(filter: { slug: { glob: "blog/*" } }) {
-        nodes {
-          excerpt
-          frontmatter {
-            title
-          }
-          parent {
-            ... on File {
-              birthTime
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const { allMdx } = useStaticQuery(graphql`
+  //   query AllGuides {
+  //     allMdx(filter: { slug: { glob: "blog/*" } }) {
+  //       nodes {
+  //         excerpt
+  //         frontmatter {
+  //           title
+  //         }
+  //         parent {
+  //           ... on File {
+  //             birthTime
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
