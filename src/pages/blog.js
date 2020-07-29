@@ -2,8 +2,6 @@ import * as React from "react"
 // import { useStaticQuery, graphql, Link as GatsbyLink } from "gatsby"
 import {
   Box,
-  Heading,
-  Text,
   Container,
   Stack,
   // Avatar,
@@ -33,18 +31,9 @@ function BlogEntries() {
   // `)
 
   return (
-    <>
-    <Layout>
+    <Layout title="Blog" subtitle="A list of blog entries.">
       <Box>
-        <Box>
-          <Container maxWidth="md">
-            <Heading as="h1" size="xl" mb="3">
-              Blog
-            </Heading>
-            <Text>A list of guides for using Chakra UI with any project.</Text>
-          </Container>
-        </Box>
-        <Container maxWidth="md">
+        <Container>
           <Stack spacing="4rem">
             {/* {allMdx.nodes.map(
               ({
@@ -69,8 +58,7 @@ function BlogEntries() {
           </Stack>
         </Container>
       </Box>
-      </Layout>
-    </>
+    </Layout>
   )
 }
 
