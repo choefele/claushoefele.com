@@ -3,7 +3,7 @@
 import React from "react";
 import { Pre, Line, LineNo, LineContent } from "./mdx-editor-styles";
 import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/nightOwl";
+import theme from "prism-react-renderer/themes/nightOwlLight";
 
 const CodeBlock = ({ className, children, lineNumbers = false, ...props }) => {
   const language = className && className.replace(/language-/, "");
