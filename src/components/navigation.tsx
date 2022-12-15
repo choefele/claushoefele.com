@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   ButtonGroup,
+  Divider,
   HStack,
   IconButton,
   Link,
@@ -12,7 +13,7 @@ import { FiMenu } from 'react-icons/fi';
 
 export default function Navigation(): JSX.Element {
   return (
-    <Box as="header" boxShadow="sm">
+    <Box as="header">
       <Box as="nav">
         <HStack as="ul" justify="space-between">
           <Button as="li" variant="link" fontSize="xl">
@@ -40,6 +41,7 @@ export default function Navigation(): JSX.Element {
           </Show>
         </HStack>
       </Box>
+      <Divider />
     </Box>
   );
 }
