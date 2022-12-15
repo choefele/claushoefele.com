@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
-import Navigation from '../components/navigation';
+import Header from '../components/header';
 import Footer from '../components/footer';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation />
+      <Header />
       <Component {...pageProps} />
       <Footer />
     </ChakraProvider>

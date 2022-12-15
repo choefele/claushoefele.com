@@ -11,7 +11,7 @@ import {
 import NextLink from 'next/link';
 import { FiMenu } from 'react-icons/fi';
 
-export default function Navigation(): JSX.Element {
+export default function Header(): JSX.Element {
   return (
     <Box as="header">
       <Box as="nav">
