@@ -6,7 +6,6 @@ import {
   IconButton,
   Link,
   useBreakpointValue,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { FiMenu } from 'react-icons/fi';
