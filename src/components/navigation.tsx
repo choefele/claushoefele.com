@@ -5,13 +5,12 @@ import {
   HStack,
   IconButton,
   Link,
-  useBreakpointValue,
+  Show,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { FiMenu } from 'react-icons/fi';
 
 export default function Navigation(): JSX.Element {
-  const isMenuLarge = useBreakpointValue({ base: false, md: true });
   return (
     <Box as="header" boxShadow="sm">
       <Box as="nav">
@@ -21,7 +20,7 @@ export default function Navigation(): JSX.Element {
               Claus Höfele
             </Link>
           </Button>
-          {isMenuLarge ? (
+          <Show above="md">
             <ButtonGroup variant="ghost" spacing="8">
               {['Product', 'Pricing', 'Resources', 'Support'].map((item) => (
                 <Button as="li" key={item}>
@@ -31,13 +30,14 @@ export default function Navigation(): JSX.Element {
                 </Button>
               ))}
             </ButtonGroup>
-          ) : (
+          </Show>
+          <Show below="md">
             <IconButton
               variant="ghost"
               icon={<FiMenu fontSize="1.5rem" />}
               aria-label="Open Menu"
             />
-          )}
+          </Show>
         </HStack>
       </Box>
     </Box>
