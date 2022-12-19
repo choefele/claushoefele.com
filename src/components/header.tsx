@@ -1,36 +1,44 @@
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  Divider,
-  HStack,
-  IconButton,
-  Link,
-  Show,
-} from '@chakra-ui/react';
+import { Box, Divider, HStack, IconButton, Link, Show } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { FiMenu } from 'react-icons/fi';
+
+function NavItem({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}): JSX.Element {
+  return (
+    <Box as="li">
+      <Link as={NextLink} href={href}>
+        {children}
+      </Link>
+    </Box>
+  );
+}
 
 export default function Header(): JSX.Element {
   return (
     <Box as="header">
       <Box as="nav">
-        <HStack as="ul" justify="space-between">
-          <Button as="li" variant="link" fontSize="xl">
-            <Link as={NextLink} href="/">
-              Claus Höfele
-            </Link>
-          </Button>
+        <HStack
+          as="ul"
+          justify="space-between"
+          fontSize="md"
+          fontWeight="bold"
+          listStyleType="none"
+          height="3rem"
+        >
+          <NavItem href="/">Claus Höfele</NavItem>
           <Show above="md">
-            <ButtonGroup variant="ghost" spacing="8">
+            <HStack spacing="1.5rem">
               {['Product', 'Pricing', 'Resources', 'Support'].map((item) => (
-                <Button as="li" key={item}>
-                  <Link as={NextLink} href="#">
-                    {item}
-                  </Link>
-                </Button>
+                <NavItem key={item} href="#">
+                  {item}
+                </NavItem>
               ))}
-            </ButtonGroup>
+            </HStack>
           </Show>
           <Show below="md">
             <IconButton

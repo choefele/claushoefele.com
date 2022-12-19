@@ -6,13 +6,15 @@ import Footer from '../components/footer';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </ChakraProvider>
+      <ChakraProvider>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </ChakraProvider>
+    </>
   );
 }
