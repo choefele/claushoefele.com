@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import Theme from '../theme';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ChakraProvider>
+      <ChakraProvider theme={Theme}>
         <Header />
         <Component {...pageProps} />
         <Footer />

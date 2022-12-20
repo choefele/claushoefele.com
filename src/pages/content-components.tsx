@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { H1, H2, H3, H4, P } from '../components/content';
 
-export default function Home(): JSX.Element {
+export default function ContentComponents(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Claus Höfele - Aligning teams, tech, and outcomes</title>
+        <title>Claus Höfele - Content components test page</title>
       </Head>
 
       <main>
