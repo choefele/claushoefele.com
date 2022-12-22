@@ -1,5 +1,6 @@
-import { HTMLChakraProps, chakra } from '@chakra-ui/react';
+import { HTMLChakraProps, Link, chakra } from '@chakra-ui/react';
 import React from 'react';
+import NextLink from 'next/link';
 import LinkedHeading from './linked-heading';
 
 export function H1(props: HTMLChakraProps<'h1'>) {
@@ -20,4 +21,12 @@ export function H4(props: HTMLChakraProps<'h4'>) {
 
 export function P(props: HTMLChakraProps<'p'>) {
   return <chakra.p apply="content.p" {...props} />;
+}
+
+export function A(props: HTMLChakraProps<'a'>) {
+  return (
+    <Link as={NextLink} {...props}>
+      {props.children}
+    </Link>
+  );
 }

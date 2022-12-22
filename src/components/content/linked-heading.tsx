@@ -7,7 +7,7 @@ export default function LinkedHeading({
 }: HTMLChakraProps<As> & { heading: ChakraComponent<As> }) {
   return (
     <Heading data-group="" css={{ scrollMarginBlock: '6.875rem' }} {...props}>
-      <span className="content">{props.children}</span>
+      {props.children}
       {props.id && (
         <chakra.a
           aria-label="anchor"

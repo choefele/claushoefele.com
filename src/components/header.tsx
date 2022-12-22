@@ -1,4 +1,5 @@
 import { Box, Divider, HStack, IconButton, Link, Show } from '@chakra-ui/react';
+import { A } from './content';
 import NextLink from 'next/link';
 import { FiMenu } from 'react-icons/fi';
 
@@ -11,9 +12,7 @@ function NavItem({
 }): JSX.Element {
   return (
     <Box as="li">
-      <Link as={NextLink} href={href}>
-        {children}
-      </Link>
+      <A href={href}>{children}</A>
     </Box>
   );
 }
