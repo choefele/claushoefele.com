@@ -1,32 +1,7 @@
 import Head from 'next/head';
-import {
-  Box,
-  Button,
-  Center,
-  Grid,
-  GridItem,
-  Icon,
-  Image,
-  Text,
-  chakra,
-  HStack,
-} from '@chakra-ui/react';
-import { A, H1, H2, P } from '../components/content';
-import { FaLinkedin } from 'react-icons/fa';
-import { SiLinkedin } from 'react-icons/si';
-
-function LinkedinButton() {
-  return (
-    <Button colorScheme={'linkedin'}>
-      <A href="https://www.linkedin.com/in/claushoefele/">
-        <chakra.span display="inline-flex" alignItems="center">
-          Get in touch on Linked{' '}
-          <Icon as={FaLinkedin} mb="0.250rem" boxSize="1.5rem" />
-        </chakra.span>
-      </A>
-    </Button>
-  );
-}
+import { Center, Grid, GridItem, Image } from '@chakra-ui/react';
+import { H1, P } from '../components/content';
+import LinkedInButton from '../components/linked-in-button';
 
 export default function Home(): JSX.Element {
   return (
@@ -54,7 +29,7 @@ export default function Home(): JSX.Element {
               Happy to learn more about your current interests.
             </P>
             <P float="right">
-              <LinkedinButton />
+              <LinkedInButton>Get in touch on</LinkedInButton>
             </P>
           </GridItem>
           <GridItem
