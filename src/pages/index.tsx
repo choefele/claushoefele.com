@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { Center, Grid, GridItem, Image } from '@chakra-ui/react';
-import { H1, P } from '../components/content';
+import { Center, Grid, GridItem, Image, VStack } from '@chakra-ui/react';
+import { H1, H2, P } from '../components/content';
 import LinkedInButton from '../components/linked-in-button';
 
 export default function Home(): JSX.Element {
@@ -12,7 +12,7 @@ export default function Home(): JSX.Element {
 
       <main>
         <Grid
-          templateColumns={{ base: '1fr', md: '3fr 1fr' }}
+          templateColumns={{ base: '1fr', md: '2fr 1fr' }}
           templateRows="auto"
           mt="1rem"
         >
@@ -28,8 +28,8 @@ export default function Home(): JSX.Element {
               from my learnings so that we don’t have to make the same mistakes.
               Happy to learn more about your current interests.
             </P>
-            <P float="right">
-              <LinkedInButton>Get in touch on</LinkedInButton>
+            <P>
+              <LinkedInButton float="right">Get in touch on</LinkedInButton>
             </P>
           </GridItem>
           <GridItem
@@ -38,20 +38,20 @@ export default function Home(): JSX.Element {
             ps={{ base: 0, md: '2rem' }}
           >
             <Center>
-              <Image
-                alt="Claus Höfele"
-                border="1px"
-                borderColor="gray.400"
-                borderRadius="full"
-                src="/claus.jpeg"
-                w={{ base: '30%', md: '100%' }}
-              />
+              <VStack>
+                <Image
+                  alt="Claus Höfele"
+                  border="1px"
+                  borderColor="gray.400"
+                  borderRadius="full"
+                  src="/claus.jpeg"
+                  w={{ base: '30%', md: '100%' }}
+                />
+              </VStack>
             </Center>
           </GridItem>
         </Grid>
-        <P>
-          P Paragraph <em>emphasis</em> and <strong>strong</strong>
-        </P>
+        <H2>Recent</H2>
       </main>
     </>
   );

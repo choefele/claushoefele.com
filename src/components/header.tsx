@@ -19,7 +19,7 @@ function NavItem({
 
 export default function Header(): JSX.Element {
   return (
-    <Box as="header">
+    <Box as="header" py="1rem">
       <Box as="nav">
         <HStack
           as="ul"
@@ -48,7 +48,6 @@ export default function Header(): JSX.Element {
           </Show>
         </HStack>
       </Box>
-      <Divider />
     </Box>
   );
 }
