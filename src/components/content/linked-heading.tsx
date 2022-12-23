@@ -1,10 +1,10 @@
-import { HTMLChakraProps, ChakraComponent, As, chakra } from '@chakra-ui/react';
+import { As, ChakraComponent, chakra, HeadingProps } from '@chakra-ui/react';
 import React from 'react';
 
 export default function LinkedHeading({
   heading: Heading,
   ...props
-}: HTMLChakraProps<As> & { heading: ChakraComponent<As> }) {
+}: HeadingProps & { heading: ChakraComponent<As> }) {
   return (
     <Heading data-group="" css={{ scrollMarginBlock: '6.875rem' }} {...props}>
       {props.children}

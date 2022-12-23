@@ -1,23 +1,35 @@
-import { Box, Divider, HStack, IconButton, Link, Show } from '@chakra-ui/react';
+import { Box, HStack, IconButton, LinkProps, Show } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import { A } from './content';
-import NextLink from 'next/link';
 import { FiMenu } from 'react-icons/fi';
 
+type Tab = { name: string; href: string };
+const tabs: Tab[] = [
+  { name: 'Speaking', href: '/speaking' },
+  { name: 'Resources', href: '/resources' },
+  { name: 'About', href: '/about' },
+];
+
 function NavItem({
+  active,
   href,
   children,
-}: {
-  href: string;
-  children: React.ReactNode;
+  ...props
+}: LinkProps & {
+  active: boolean;
 }): JSX.Element {
   return (
     <Box as="li">
-      <A href={href}>{children}</A>
+      <A href={href} textDecoration={active ? 'underline' : ''} {...props}>
+        {children}
+      </A>
     </Box>
   );
 }
 
 export default function Header(): JSX.Element {
+  const router = useRouter();
+
   return (
     <Box as="header" py="1rem">
       <Box as="nav">
@@ -29,12 +41,18 @@ export default function Header(): JSX.Element {
           listStyleType="none"
           height="3rem"
         >
-          <NavItem href="/">Claus Höfele</NavItem>
+          <NavItem href="/" active={false} _hover={{ textDecoration: '' }}>
+            Claus Höfele
+          </NavItem>
           <Show above="md">
             <HStack spacing="1.5rem">
-              {['Product', 'Pricing', 'Resources', 'Support'].map((item) => (
-                <NavItem key={item} href="#">
-                  {item}
+              {tabs.map((tab) => (
+                <NavItem
+                  key={tab.name}
+                  href={tab.href}
+                  active={router.asPath === tab.href}
+                >
+                  {tab.name}
                 </NavItem>
               ))}
             </HStack>
