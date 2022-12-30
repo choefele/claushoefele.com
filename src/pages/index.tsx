@@ -1,7 +1,28 @@
 import Head from 'next/head';
-import { Center, Grid, GridItem, Image, VStack } from '@chakra-ui/react';
+import { GetStaticProps } from 'next';
+import {
+  Box,
+  Center,
+  Grid,
+  GridItem,
+  Image,
+  Flex,
+  Spacer,
+  Square,
+  VStack,
+} from '@chakra-ui/react';
 import { H1, H2, P } from '../components/content';
 import LinkedInButton from '../components/linked-in-button';
+import loadContentData from '../load-content-data';
+
+export const getStaticProps: GetStaticProps = async () => {
+  const contentData = await loadContentData();
+  console.log(contentData.books);
+
+  return {
+    props: {},
+  };
+};
 
 export default function Home(): JSX.Element {
   return (
@@ -51,7 +72,42 @@ export default function Home(): JSX.Element {
             </Center>
           </GridItem>
         </Grid>
-        <H2>Recent</H2>
+        <H2>----</H2>
+        <Flex color="white" columnGap="6" rowGap="3" flexFlow="row wrap">
+          <Box flex="1" bg="tomato" height="150px">
+            <P>
+              Box 1 lkjd lakjsd lakjsd lkasjd laksjdl askjdlaksjd lksjd lskj
+              dlslkjd lakjsd l lkas ldkahsd jahs dkjahsdk ajhsdk ajshdk ajshdk
+              ajshd kjashd kajshd kajhs dkajshdk ajhsdk ajhdk a 123
+            </P>
+          </Box>
+          <Box flex="2" bg="tomato">
+            <P>Box 2</P>
+          </Box>
+          <Box flex="2" bg="tomato">
+            <P>Box 3</P>
+          </Box>
+          <Box flexBasis="100%" height="0" bg="tomato" />
+          <Box flex="2" bg="tomato">
+            <P>Box 3</P>
+          </Box>
+          <Box flex="2" bg="tomato">
+            <P>Box 3</P>
+          </Box>
+        </Flex>
+        <H2>-----</H2>
+        <Grid templateColumns="repeat(5, 1fr)" templateRows="auto" gap={6}>
+          <GridItem gridColumn="auto / span 1" h="10" bg="blue.500">
+            Meet me at
+          </GridItem>
+          <GridItem gridColumn="auto / span 2" h="10" bg="blue.500" />
+          <GridItem gridColumn="auto / span 2" h="10" bg="blue.500">
+            Meet me at
+          </GridItem>
+          <GridItem gridColumn="auto / span 2" h="10" bg="blue.500" />
+          <GridItem gridColumn="auto / span 2" h="10" bg="blue.500" />
+          <GridItem gridColumn="auto / span 2" h="10" bg="blue.500" />
+        </Grid>
       </main>
     </>
   );
