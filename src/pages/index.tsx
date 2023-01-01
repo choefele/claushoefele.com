@@ -34,7 +34,7 @@ export default function Home(): JSX.Element {
         <Grid
           templateColumns={{ base: '1fr', md: '2fr 1fr' }}
           templateRows="auto"
-          mt="1rem"
+          mt="2rem"
         >
           <GridItem>
             <H1 mt="0">Hi, I’m Claus 👋</H1>

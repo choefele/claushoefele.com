@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import { H1, H2, P } from '../components/content';
 
-export default function About(): JSX.Element {
+export default function Meida(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Claus Höfele - About me</title>
+        <title>Claus Höfele - Speaking & Publication</title>
       </Head>
 
       <main>
-        <H1>About</H1>
+        <H1>Media</H1>
       </main>
     </>
   );
