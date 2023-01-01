@@ -7,8 +7,7 @@ import {
   GridItem,
   Image,
   Flex,
-  Spacer,
-  Square,
+  SimpleGrid,
   VStack,
 } from '@chakra-ui/react';
 import { H1, H2, P } from '../components/content';
@@ -72,8 +71,22 @@ export default function Home(): JSX.Element {
             </Center>
           </GridItem>
         </Grid>
-        <H2>----</H2>
-        <Flex color="white" columnGap="6" rowGap="3" flexFlow="row wrap">
+
+        <H2 textAlign="center">🔥 What’s happening right now</H2>
+        <SimpleGrid mt="1.25rem" columns={3} spacing={10}>
+          <Box bg="tomato" height="80px"></Box>
+          <Box bg="tomato" height="80px"></Box>
+          <Box bg="tomato" height="80px"></Box>
+        </SimpleGrid>
+
+        <H2 textAlign="center">🤹 And what else</H2>
+        <Flex
+          mt="1.25rem"
+          color="white"
+          columnGap="6"
+          rowGap="3"
+          flexFlow="row wrap"
+        >
           <Box flex="1" bg="tomato" height="150px">
             <P>
               Box 1 lkjd lakjsd lakjsd lkasjd laksjdl askjdlaksjd lksjd lskj
@@ -96,7 +109,12 @@ export default function Home(): JSX.Element {
           </Box>
         </Flex>
         <H2>-----</H2>
-        <Grid templateColumns="repeat(5, 1fr)" templateRows="auto" gap={6}>
+        <Grid
+          mt="1.25rem"
+          templateColumns="repeat(5, 1fr)"
+          templateRows="auto"
+          gap={6}
+        >
           <GridItem gridColumn="auto / span 1" h="10" bg="blue.500">
             Meet me at
           </GridItem>
