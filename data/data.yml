@@ -6,22 +6,37 @@ books:
     authors: 'Holger Pohl'
   - name: 'Sketching at work'
     authors: 'Martin J. Eppler, Roland A. Pfister'
-company: spacelift
-domain:
-  - devops
-  - devsecops
-tutorial:
-  - yaml:
-      name: "YAML Ain't Markup Language"
-      type: awesome
-      born: 2001
-  - json:
-      name: JavaScript Object Notation
-      type: great
-      born: 2001
-  - xml:
-      name: Extensible Markup Language
-      type: good
-      born: 1996
-author: omkarbirade
-published: true
+publications:
+  - name: 'Evo #69 - So viel positive Psychologie steckt im Leadership'
+    date: '2022-03-01'
+    description: 'Description description description description description description description description description description description description description description description description description description description description description description description description'
+    image:
+      alt: ''
+      url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+    action:
+      name: 'Listen on SoundCloud'
+      url: 'https://soundcloud.com/evolution-marketing/evo-69-so-viel-positive-psychologie-steckt-im-leadership1'
+  - name: 'Agile Review - Special Guest: Claus Höfele'
+    date: '2022-08-01'
+    description: ''
+    action:
+      name: 'Watch on YouTube'
+      url: 'https://youtu.be/gpTTMLMk5_Q'
+  - name: 'Achieve your goals with Tiny Habits and WOOP'
+    date: '2022-08-30'
+    description: ''
+    action:
+      name: 'Read on the Tiny Habits blog'
+      url: 'https://tinyhabitsacademy.com/achieve-your-goals-with-tiny-habits-and-woop/'
+  - name: 'School of Hiring - How To Become Better At Hiring with Claus Höfele'
+    date: '2022-11-28'
+    description: ''
+    action:
+      name: 'Listen on Buzzsprout'
+      url: 'https://schoolofhiring.buzzsprout.com/1571719/11772800-how-to-become-better-at-hiring-with-claus-hofele-head-of-engineering-at-doctari-group'
+  - name: 'Inspired e011 - Trust, Responsibility, Behavior Change, and Positive Psychology with Claus Höfele'
+    date: '2022-03-14'
+    description: ''
+    action:
+      name: 'Listen on Anchor'
+      url: 'https://anchor.fm/inspiredinberlin/episodes/Inspired-e011---Trust--Responsibility--Behavior-Change--and-Positive-Psychology-with-Claus-Hoefele-e1fmdqt'

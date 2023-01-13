@@ -2,11 +2,28 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import yaml from 'js-yaml';
 
-type ContentData = {
-  books: {
+export type Book = {
+  name: string;
+  authors: string;
+};
+
+export type Publication = {
+  name: string;
+  date: string; // to keep it JSON
+  description: string;
+  image?: {
+    alt: string;
+    url: string;
+  };
+  action?: {
     name: string;
-    authors: string;
-  }[];
+    url: string;
+  };
+};
+
+export type ContentData = {
+  books: Book[];
+  publications: Publication[];
 };
 
 export default async function loadContentData(): Promise<ContentData> {

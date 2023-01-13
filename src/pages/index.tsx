@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { GetStaticProps } from 'next';
 import {
   Box,
   Center,
@@ -12,16 +11,6 @@ import {
 } from '@chakra-ui/react';
 import { H1, H2, P } from '../components/content';
 import LinkedInButton from '../components/linked-in-button';
-import loadContentData from '../load-content-data';
-
-export const getStaticProps: GetStaticProps = async () => {
-  const contentData = await loadContentData();
-  console.log(contentData.books);
-
-  return {
-    props: {},
-  };
-};
 
 export default function Home(): JSX.Element {
   return (
