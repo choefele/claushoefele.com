@@ -3,23 +3,28 @@ import { GetStaticProps } from 'next';
 import { Flex, Image, Stack, StackDivider } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { A, H1, H2, H3, P } from '../components/content';
-import loadContentData, { Publication } from '../load-content-data';
+import loadContentData, {
+  Publication,
+  GroupedPublication,
+} from '../load-content-data';
 
 export const getStaticProps: GetStaticProps = async () => {
   const contentData = await loadContentData();
-  const publications = contentData.publications;
+  const groupedPublications = contentData.groupedPublications;
+  console.log(contentData);
 
   return {
-    props: { publications },
+    props: { groupedPublications },
   };
 };
 
-const Row1 = ({ publication }: { publication: Publication }) => (
+const Row = ({ publication }: { publication: Publication }) => (
   <Flex justifyContent="flex-start" alignItems="stretch">
     {publication.image && (
       <Image
         mr="0.5rem"
         height="7rem"
+        borderRadius="md"
         alt={publication.image.alt}
         src={publication.image.url}
       />
@@ -41,25 +46,47 @@ const Row1 = ({ publication }: { publication: Publication }) => (
 );
 
 export default function Publications({
-  publications,
+  groupedPublications,
 }: {
-  publications: Publication[];
+  groupedPublications: GroupedPublication[];
 }): JSX.Element {
   return (
     <>
       <Head>
-        <title>Claus Höfele - Speaking & Publications</title>
+        <title>Claus Höfele - Speaking & Writing</title>
       </Head>
 
       <main>
-        <H1>Talks, Podcasts, Articles, and other Publications</H1>
-        <P>TBD</P>
-        <H2>Publications in 2022</H2>
-        <Stack divider={<StackDivider />} spacing="4">
-          {publications.map((publication) => {
-            return <Row1 key={publication.name} publication={publication} />;
-          })}
-        </Stack>
+        <H1 mt="2rem" mb=".25rem">
+          Talks, Podcasts, Articles, and other Publications
+        </H1>
+        <P>
+          Over time, I've contributed to a number of publicly available
+          resources that mix my ideas with those of others. Please{' '}
+          <A href="/about">reach out</A> if you have a podcast, round table, or
+          conference where I might be able to contribute.
+        </P>
+        {groupedPublications.map((group) => {
+          return (
+            <>
+              <H2 key="group.name" mt="4rem" mb=".25rem">
+                {group.name}
+              </H2>
+              <Stack
+                mt="2rem"
+                mb=".25rem"
+                divider={<StackDivider />}
+                spacing="6"
+              >
+                {group.publications.map((publication) => {
+                  return (
+                    <Row key={publication.name} publication={publication} />
+                  );
+                })}
+              </Stack>
+            </>
+          );
+        })}
       </main>
     </>
   );

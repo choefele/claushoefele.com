@@ -21,9 +21,14 @@ export type Publication = {
   };
 };
 
+export type GroupedPublication = {
+  name: string;
+  publications: Publication[];
+};
+
 export type ContentData = {
   books: Book[];
-  publications: Publication[];
+  groupedPublications: GroupedPublication[];
 };
 
 export default async function loadContentData(): Promise<ContentData> {
