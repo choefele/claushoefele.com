@@ -11,7 +11,6 @@ import loadContentData, {
 export const getStaticProps: GetStaticProps = async () => {
   const contentData = await loadContentData();
   const groupedPublications = contentData.groupedPublications;
-  console.log(contentData);
 
   return {
     props: { groupedPublications },
@@ -61,7 +60,7 @@ export default function Publications({
           Talks, Podcasts, Articles, and other Publications
         </H1>
         <P>
-          Over time, I've contributed to a number of publicly available
+          Over time, I’ve contributed to a number of publicly available
           resources that mix my ideas with those of others. Please{' '}
           <A href="/about">reach out</A> if you have a podcast, round table, or
           conference where I might be able to contribute.
