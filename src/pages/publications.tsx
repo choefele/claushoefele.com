@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import { Flex, Image, Stack, StackDivider } from '@chakra-ui/react';
+import { Box, Flex, Image, Stack, StackDivider } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { A, H1, H2, H3, P } from '../components/content';
 import loadContentData, {
@@ -65,6 +65,13 @@ export default function Publications({
           <A href="/about">reach out</A> if you have a podcast, round table, or
           conference where I might be able to contribute.
         </P>
+        <Box mt="4rem" border="1px solid lightgray" borderRadius="md">
+          <iframe
+            src="https://anchor.fm/inspiredinberlin/embed/episodes/Inspired-e011---Trust--Responsibility--Behavior-Change--and-Positive-Psychology-with-Claus-Hoefele-e1fmdqt/a-a7iqlnb"
+            width="100%"
+            scrolling="no"
+          ></iframe>
+        </Box>
         {groupedPublications.map((group) => {
           return (
             <>
