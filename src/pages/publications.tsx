@@ -3,14 +3,14 @@ import { GetStaticProps } from 'next';
 import { Box, Flex, Image, Stack, StackDivider } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { A, H1, H2, H3, P } from '../components/content';
-import loadContentData, {
+import {
+  loadPublications,
   Publication,
   GroupedPublication,
 } from '../load-content-data';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const contentData = await loadContentData();
-  const groupedPublications = contentData.groupedPublications;
+  const groupedPublications = await loadPublications();
 
   return {
     props: { groupedPublications },
@@ -21,18 +21,19 @@ const Row = ({ publication }: { publication: Publication }) => (
   <Flex justifyContent="flex-start" alignItems="stretch">
     {publication.image && (
       <Image
-        mr="0.5rem"
+        mr="1rem"
+        width="7rem"
         height="7rem"
+        objectFit="contain"
         borderRadius="md"
+        border="1px solid lightgray"
         alt={publication.image.alt}
         src={publication.image.url}
       />
     )}
     <Flex flex={1} flexDirection="column">
       <H3 mt="0">{publication.name}</H3>
-      <P noOfLines={2} mt={0}>
-        {publication.description}
-      </P>
+      <P mt={0}>{publication.description}</P>
       {publication.action && (
         <Stack justifyContent="flex-end" isInline>
           <A href={publication.action.url} mt="0.5rem" isExternal>

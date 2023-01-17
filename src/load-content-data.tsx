@@ -26,15 +26,10 @@ export type GroupedPublication = {
   publications: Publication[];
 };
 
-export type ContentData = {
-  books: Book[];
-  groupedPublications: GroupedPublication[];
-};
-
-export default async function loadContentData(): Promise<ContentData> {
-  const dataFile = path.join(process.cwd(), 'data/data.yml');
+export async function loadPublications(): Promise<GroupedPublication[]> {
+  const dataFile = path.join(process.cwd(), 'data/publications.yml');
   const fileContents = await fs.readFile(dataFile, 'utf8');
-  const data = yaml.load(fileContents) as ContentData;
+  const data = yaml.load(fileContents) as GroupedPublication[];
 
   return data;
 }
