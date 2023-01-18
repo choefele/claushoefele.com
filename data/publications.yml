@@ -3,7 +3,7 @@
   publications:
     - name: 'Leaders in Tech – Retaining Talent @Austin Fraser'
       date: '2022-02-09'
-      description: 'I worked with Katarina and Austin Fraser and the hard-to-fill positions for our ERP systems development. They also organize regular networking events in their fab office near Berlin Zoological Garden. This time, I’m part of a round table discussion on retaining talent.'
+      description: 'I worked with Katarina and Austin Fraser on the hard-to-fill positions for our ERP systems development. They also organize regular networking events in their fab office near Berlin Zoological Garden. This time, I’m part of a round table discussion on retaining talent.'
       image:
         alt: 'Leaders in Tech logo'
         url: '/publications/LIT-Berlin-Event-Header-2.png'
@@ -12,13 +12,13 @@
   publications:
     - name: 'CTO Craft Bytes: Your hiring process is your best employer branding tool'
       date: '2022-12-02'
-      description: 'In addition to their Slack group, the CTO Craft community also hosts regular lunch events. I had the pleasure to present my views on the best hiring processes that also lift your standing as great company.'
+      description: 'In addition to their Slack group, the CTO Craft community also hosts regular lunch events. I had the pleasure to present my views on the best hiring processes that also improve your reputation in the job market.'
       image:
         alt: 'CTO Craft logo'
         url: '/publications/1579535767314.jpeg'
     - name: 'School of Hiring - How To Become Better At Hiring with Claus Höfele'
       date: '2022-11-28'
-      description: 'Konstanty is a respected teacher of great hiring practices and the host of School of Hiring. We talk about how you as a leader can help yourself improve your hiring process.'
+      description: 'Konstanty is a respected teacher of great hiring practices and the host of School of Hiring. We talk about how you as a engineering leader can help improve your company’s hiring practices.'
       image:
         alt: 'The Hire Better podcast'
         url: '/publications/school-of-hiring-se3e4.jpg'
@@ -45,7 +45,7 @@
         url: 'https://youtu.be/gpTTMLMk5_Q'
     - name: 'Inspired e011 - Trust, Responsibility, Behavior Change, and Positive Psychology with Claus Höfele'
       date: '2022-03-14'
-      description: 'Balach and I go back a long time and met while working for HERE Technologies. He’s an all-around product genius and also develops a SaaS planning tool epek. In his podcast, we talk about high performing teams, and how leaders can use Emotional Intelligence and Positive Psychology to create a better workplace for themselves and their teams.'
+      description: 'Balach and I go back a long time and met while working for HERE Technologies. He’s an all-around product genius and also develops the SaaS planning tool epek. In his podcast, we talk about high performing teams, and how leaders can use Emotional Intelligence and Positive Psychology to create a better workplace for themselves and their teams.'
       image:
         alt: 'Inspired in Berlin with Balach Hussain'
         url: '/publications/inspired-e011-podcast.jpg'
@@ -54,7 +54,7 @@
         url: 'https://anchor.fm/inspiredinberlin/episodes/Inspired-e011---Trust--Responsibility--Behavior-Change--and-Positive-Psychology-with-Claus-Hoefele-e1fmdqt'
     - name: 'Evo #69 - So viel positive Psychologie steckt im Leadership'
       date: '2022-03-01'
-      description: 'Description description description description description description description description description description description description description description description description description description description description description description description description'
+      description: '🇩🇪 Mit Maxie hatte ich die Freude über Positive Psychologie im Zusammenhang mit Führung zu sprechen.'
       image:
         alt: 'Maxi and Claus talk on the Evo podcast'
         url: '/publications/evo-69-podcast.jpg'
@@ -75,7 +75,7 @@
         url: 'https://speakerdeck.com/choefele/server-side-swift-iosdevuk-7'
     - name: 'Practical WatchKit Development (UIKonf 2015)'
       date: '2015-05-18'
-      description: 'My biggest presentation gig to date at the lovely UIKonf. I gave a no-nonsense talk about WatchKit development. At the time, I worked for eBay Kleinanzeigen where we developed one of the earliest WatchKit app to send messages between customer.'
+      description: 'My biggest presentation gig to date at the lovely UIKonf. I gave a no-nonsense talk about WatchKit development. At the time, I worked for eBay Kleinanzeigen where we developed one of the earliest WatchKit apps to send messages among customers.'
       image:
         alt: 'UIKonf logo'
         url: '/publications/uikonf-logo.svg'
@@ -84,7 +84,7 @@
         url: 'https://www.youtube.com/watch?v=T9h72hH9TWA'
     - name: 'Ok Festival 2014: Usability Testing Workshop'
       date: '2014-07-18'
-      description: 'As an engineer, I found usability testing incredibly useful to figure out how to improve your apps. In this workshop, Lydia and I shared our process (based on Steve Krug’s wonderful books).'
+      description: 'As an engineer, I found usability testing incredibly useful to figure out how to improve the apps I helped to develop. In this workshop, Lydia and I shared our process (based on Steve Krug’s wonderful books).'
       image:
         alt: 'Presentation'
         url: '/publications/easel.svg'
@@ -93,7 +93,7 @@
         url: 'https://www.slideshare.net/choefele/ok-festival-2014-usability-testing-workshop'
     - name: 'Macoun 2013: MapKit Clustering Techniken'
       date: '2013-10-06'
-      description: 'My CCHMapClusterControlle library has been my most popular GitHub repo by far. I solved a real problem for my because I needed a great way to display thousands of items on a map for one of my open source apps. In this presentation, I explained the algorithmic details at the oldest(?) German iOS conference.'
+      description: '🇩🇪 Meine CCHMapClusterController Bibliothek ist mein erfolgreichstes Open-Source-Projekt. Es hat mir auch in meiner eigenen Stolpersteine App gute Dienste geleistet um mehrere tausend Symbole auf einer Karte anzuzeigen. In diesem Vortrag gehe ich auf die Details des Clustering Algorithmus ein.'
       image:
         alt: 'Macoun logo'
         url: '/publications/macoun_logo.png'
@@ -108,7 +108,7 @@
         url: '/publications/file-earmark-text.svg'
     - name: 'Mobile 3D Graphics and other books'
       date: '2007-03-01'
-      description: 'In addition to authroing Mobile 3D Graphics (Cengage Learning PTR), I also co-authored More iPhone Cool Projects (Apress) and Game Programming Gems 8 (Cengage Learning PTR). Those were the times when I focused my work on devices with limited processing power such as mobile phones and game consoles.'
+      description: 'In addition to authoring Mobile 3D Graphics (Cengage Learning PTR), I also co-authored More iPhone Cool Projects (Apress) and Game Programming Gems 8 (Cengage Learning PTR). Those were the times when I focused my work on devices with limited processing power such as mobile phones and game consoles.'
       image:
         alt: 'Claus’ book about mobile 3D graphics'
         url: '/publications/51uWqpvuOmL._SX402_BO1,204,203,200_.jpg'
