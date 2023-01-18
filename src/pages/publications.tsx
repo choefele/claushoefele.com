@@ -66,12 +66,20 @@ export default function Publications({
           <A href="/about">reach out</A> if you have a podcast, round table, or
           conference where I might be able to contribute.
         </P>
-        <Box mt="4rem" border="1px solid lightgray" borderRadius="md">
+        <Box
+          mt="4rem"
+          border="1px solid lightgray"
+          borderRadius="md"
+          backgroundColor="#282828"
+        >
           <iframe
-            src="https://anchor.fm/inspiredinberlin/embed/episodes/Inspired-e011---Trust--Responsibility--Behavior-Change--and-Positive-Psychology-with-Claus-Hoefele-e1fmdqt/a-a7iqlnb"
+            style={{ borderRadius: '12px' }}
+            src="https://open.spotify.com/embed/episode/3U29RKSLuI4DfvD56lkMIf?utm_source=generator&theme=0"
             width="100%"
-            scrolling="no"
-          ></iframe>
+            height="152"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>{' '}
         </Box>
         {groupedPublications.map((group) => {
           return (
