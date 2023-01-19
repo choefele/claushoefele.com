@@ -50,8 +50,7 @@ export default function Home(): JSX.Element {
               <VStack>
                 <Image
                   alt="Claus Höfele"
-                  border="1px"
-                  borderColor="gray.400"
+                  border="1px solid lightgray"
                   borderRadius="full"
                   src="/claus.jpeg"
                   w={{ base: '30%', md: '100%' }}
