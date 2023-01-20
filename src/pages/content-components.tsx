@@ -11,7 +11,12 @@ export default function ContentComponents(): JSX.Element {
       <main>
         <H1 id="h1">H1 Heading</H1>
         <P>
-          P Paragraph <em>emphasis</em> and <strong>strong</strong>
+          P Paragraph <em>em emphasis</em> , <strong>strong</strong>,{' '}
+          <del>del deleted</del>, <ins>ins inserted</ins>, and <code>code</code>
+          <blockquote>
+            Blockquote text text text text text text text text text text text
+            text text{' '}
+          </blockquote>
         </P>
         <H2 id="h2">H2 Heading</H2>
         <P>P Paragraph</P>
