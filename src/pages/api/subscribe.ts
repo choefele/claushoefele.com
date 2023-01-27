@@ -35,7 +35,7 @@ export default async function handler(
       body: JSON.stringify(body),
     });
 
-    status = 500;
+    status = response.status === 200 ? 200 : 500;
     message = response;
   } catch (err) {
     status = 500;

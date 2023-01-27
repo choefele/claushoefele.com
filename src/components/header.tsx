@@ -6,7 +6,7 @@ import { FiMenu } from 'react-icons/fi';
 type Tab = { name: string; href: string };
 const tabs: Tab[] = [
   { name: 'Newsletter', href: '/newsletter' },
-  { name: 'Where to Meet Me', href: '/meetme' },
+  { name: 'Tools & Goodies', href: '/resources' },
   { name: 'Speaking & Writing', href: '/publications' },
   { name: 'About', href: '/about' },
 ];
