@@ -1,12 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import Head from 'next/head';
-import {
-  Button,
-  Text,
-  Input,
-  InputGroup,
-  InputRightElement,
-} from '@chakra-ui/react';
+import { Button, Input, InputGroup, InputRightElement } from '@chakra-ui/react';
 import { H1, H2, P } from '../components/content';
 
 function SubscribeForm() {
