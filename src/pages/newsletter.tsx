@@ -1,6 +1,12 @@
 import React, { ChangeEvent } from 'react';
 import Head from 'next/head';
-import { Button, Input, InputGroup, InputRightElement } from '@chakra-ui/react';
+import {
+  Button,
+  FormControl,
+  Input,
+  InputGroup,
+  InputRightElement,
+} from '@chakra-ui/react';
 import { H1, H2, P } from '../components/content';
 
 function SubscribeForm() {
@@ -8,20 +14,24 @@ function SubscribeForm() {
 
   return (
     <form>
-      <InputGroup size="md">
-        <Input
-          value={email}
-          onChange={(event: ChangeEvent<HTMLInputElement>) => {
-            setEmail(event.target.value);
-          }}
-          pr="4.5rem"
-          type="email"
-          placeholder="Your best email"
-        />
-        <InputRightElement width="7rem">
-          <Button size="sm">Subscribe</Button>
-        </InputRightElement>
-      </InputGroup>
+      <FormControl isRequired>
+        <InputGroup size="md">
+          <Input
+            value={email}
+            onChange={(event: ChangeEvent<HTMLInputElement>) => {
+              setEmail(event.target.value);
+            }}
+            pr="7rem"
+            type="email"
+            placeholder="Your best email"
+          />
+          <InputRightElement width="7rem">
+            <Button type="submit" size="sm">
+              Subscribe
+            </Button>
+          </InputRightElement>
+        </InputGroup>
+      </FormControl>
     </form>
   );
 }
