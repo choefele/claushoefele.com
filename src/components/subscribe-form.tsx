@@ -21,6 +21,7 @@ export default function SubscribeForm() {
   const {
     handleSubmit,
     register,
+    setError,
     formState: { errors, isSubmitting },
   } = useForm<SubscribeRequestData>({
     resolver: zodResolver(subscribeRequestSchema),
@@ -28,13 +29,19 @@ export default function SubscribeForm() {
   const onSubmit: SubmitHandler<SubscribeRequestData> = async (data) => {
     const result = await subscribeEmail(data);
     console.log(result);
+    if (result.status >= 300) {
+      setError('email', {
+        type: 'custom',
+        message: 'Error subscribing – please try again',
+      });
+    }
   };
 
   // Field doesn't turn red reliably when invalid
-  // Show error in proper place
+  // Show error in proper place - div
   // Send to API
   // - useState to remember success; render confirm like https://monicalent.com
-  // - wrap client state in custom hook
+  // - show API error message
   // Decide landing page after opt in
   // Set up SiB emails in english
 
@@ -44,9 +51,7 @@ export default function SubscribeForm() {
         isRequired={!subscribeRequestSchema.shape.email.isOptional()}
         isInvalid={!!errors.email}
       >
-        <FormErrorMessage>
-          {errors.email && errors.email.message}
-        </FormErrorMessage>
+        <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
 
         <InputGroup size="md">
           <Input

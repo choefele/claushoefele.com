@@ -104,7 +104,7 @@ export default async function subscribeHandler(
   // Validate request data
   const validation = subscribeRequestSchema.safeParse(req.body);
   if (!validation.success) {
-    console.log('Invalid request data', {
+    console.log('Invalid request data:', {
       body: req.body,
       validation,
     });
@@ -134,7 +134,9 @@ export default async function subscribeHandler(
   );
 
   if (status >= 300) {
-    console.log('createContactSiB API returned an error:', message);
+    console.log('Sib API returned an error:', { status, message });
+  } else {
+    console.log(`Successfully subscribed ${requestData.email}`);
   }
 
   res.status(status < 300 ? 204 : 500).end();
