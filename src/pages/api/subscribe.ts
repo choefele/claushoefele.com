@@ -5,16 +5,16 @@ const listId = 5;
 const templateId = 1;
 const redirectionUrl = 'http://localhost:3000/newsletter';
 
-export const subscribeFormSchema = z.object({
+export const subscribeRequestSchema = z.object({
   email: z.string().email(),
   subscribeId: z.string(),
 });
-export type SubscribeFormData = z.infer<typeof subscribeFormSchema>;
-export type SubscribeResponseData = {};
+export type SubscribeRequestData = z.infer<typeof subscribeRequestSchema>;
+export type SubscribeResponseData = void;
 
 // Client call to this API to subscribe email
 export async function subscribeEmail(
-  subscriberFormData: SubscribeFormData
+  subscriberFormData: SubscribeRequestData
 ): Promise<{ status: number; message: Object }> {
   let status: number;
   let message: unknown;
@@ -101,20 +101,33 @@ export default async function subscribeHandler(
   req: NextApiRequest,
   res: NextApiResponse<SubscribeResponseData>
 ): Promise<void> {
+  // Validate request data
+  const validation = subscribeRequestSchema.safeParse(req.body);
+  if (!validation.success) {
+    console.log('Invalid request data', {
+      body: req.body,
+      validation,
+    });
+    res.status(400).end();
+    return;
+  }
+  const requestData = validation.data;
+
   // Simple check where request came from
-  if (req.body.subscribeId !== process.env.NEXT_PUBLIC_SUBSCRIBE_ID) {
+  if (requestData.subscribeId !== process.env.NEXT_PUBLIC_SUBSCRIBE_ID) {
     console.log('Invalid subscribe ID:', {
-      req: req.body.subscribeID,
+      subscribeId: requestData.subscribeId,
       env: process.env.NEXT_PUBLIC_SUBSCRIBE_ID,
     });
 
     res.status(400).end();
+    return;
   }
 
   // Create contact
   const { status, message } = await createContactSiB(
     process.env.SENDINBLUE_API_KEY || '',
-    req.body.email,
+    requestData.email,
     listId,
     templateId,
     redirectionUrl

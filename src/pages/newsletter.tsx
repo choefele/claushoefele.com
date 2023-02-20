@@ -13,8 +13,8 @@ import {
 } from '@chakra-ui/react';
 import { H1, H2, P } from '../components/content';
 import {
-  SubscribeFormData,
-  subscribeFormSchema,
+  SubscribeRequestData,
+  subscribeRequestSchema,
   subscribeEmail,
 } from './api/subscribe';
 
@@ -23,24 +23,24 @@ function SubscribeForm() {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
-  } = useForm<SubscribeFormData>({
-    resolver: zodResolver(subscribeFormSchema),
+  } = useForm<SubscribeRequestData>({
+    resolver: zodResolver(subscribeRequestSchema),
   });
-  const onSubmit: SubmitHandler<SubscribeFormData> = async (data) => {
+  const onSubmit: SubmitHandler<SubscribeRequestData> = async (data) => {
     const result = await subscribeEmail(data);
     console.log(result);
   };
 
   // Field doesn't turn red reliably when invalid
+  // Show error in proper place
   // Send to API
   // - useState to remember success; render confirm like https://monicalent.com
-  // - protect API with zod like https://giancarlobuomprisco.com/next/protect-next-api-zod
   // - wrap client state in custom hook
 
   return (
     <form noValidate onSubmit={handleSubmit(onSubmit)}>
       <FormControl
-        isRequired={!subscribeFormSchema.shape.email.isOptional()}
+        isRequired={!subscribeRequestSchema.shape.email.isOptional()}
         isInvalid={!!errors.email}
       >
         <FormErrorMessage>
