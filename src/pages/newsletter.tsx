@@ -2,7 +2,6 @@ import { ChangeEvent, useState } from 'react';
 import Head from 'next/head';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
 import {
   Button,
   FormControl,
@@ -13,32 +12,41 @@ import {
   InputRightElement,
 } from '@chakra-ui/react';
 import { H1, H2, P } from '../components/content';
-
-const schema = z.object({
-  email: z.string().email(),
-  subscribeId: z.string(),
-});
+import {
+  SubscribeFormData,
+  subscribeFormSchema,
+  subscribeEmail,
+} from './api/subscribe';
 
 function SubscribeForm() {
   const {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
-  } = useForm<z.infer<typeof schema>>({
-    resolver: zodResolver(schema),
+  } = useForm<SubscribeFormData>({
+    resolver: zodResolver(subscribeFormSchema),
   });
-  const onSubmit: SubmitHandler<z.infer<typeof schema>> = (data) =>
-    console.log(data);
+  const onSubmit: SubmitHandler<SubscribeFormData> = async (data) => {
+    const result = await subscribeEmail(data);
+    console.log(result);
+  };
 
   // Field doesn't turn red reliably when invalid
   // Send to API
+  // - useState to remember success; render confirm like https://monicalent.com
+  // - protect API with zod like https://giancarlobuomprisco.com/next/protect-next-api-zod
+  // - wrap client state in custom hook
 
   return (
     <form noValidate onSubmit={handleSubmit(onSubmit)}>
       <FormControl
-        isRequired={!schema.shape.email.isOptional()}
+        isRequired={!subscribeFormSchema.shape.email.isOptional()}
         isInvalid={!!errors.email}
       >
+        <FormErrorMessage>
+          {errors.email && errors.email.message}
+        </FormErrorMessage>
+
         <InputGroup size="md">
           <Input
             id="email"
@@ -49,14 +57,16 @@ function SubscribeForm() {
             {...register('email')}
           />
           <InputRightElement width="7rem">
-            <Button type="submit" size="sm" isLoading={isSubmitting}>
+            <Button
+              type="submit"
+              size="sm"
+              isLoading={isSubmitting}
+              isDisabled={isSubmitting}
+            >
               Subscribe
             </Button>
           </InputRightElement>
         </InputGroup>
-        <FormErrorMessage>
-          {errors.email && errors.email.message}
-        </FormErrorMessage>
       </FormControl>
       <input
         type="hidden"
