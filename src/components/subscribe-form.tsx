@@ -5,11 +5,12 @@ import {
   Button,
   FormControl,
   FormErrorMessage,
-  FormLabel,
+  FormHelperText,
   Input,
   InputGroup,
   InputRightElement,
 } from '@chakra-ui/react';
+import { A } from './content';
 import {
   SubscribeRequestData,
   subscribeRequestSchema,
@@ -35,7 +36,6 @@ export default function SubscribeForm() {
   // - useState to remember success; render confirm like https://monicalent.com
   // - wrap client state in custom hook
   // Decide landing page after opt in
-  // Privacy footer https://www.sendinblue.com/legal/privacypolicy/
   // Set up SiB emails in english
 
   return (
@@ -68,6 +68,12 @@ export default function SubscribeForm() {
             </Button>
           </InputRightElement>
         </InputGroup>
+        <FormHelperText fontSize="xs">
+          We’ll never share your email. Unsubscribe any time.{' '}
+          <A href="https://www.sendinblue.com/legal/privacypolicy/">
+            Privacy policy.
+          </A>
+        </FormHelperText>
       </FormControl>
       <input
         type="hidden"
