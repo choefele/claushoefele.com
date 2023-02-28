@@ -9,7 +9,7 @@ import {
   SimpleGrid,
   VStack,
 } from '@chakra-ui/react';
-import { H1, H2, P } from '../components/content';
+import { H1, H2, P, A } from '../components/content';
 import LinkedInButton from '../components/linked-in-button';
 
 export default function Home(): JSX.Element {
@@ -32,10 +32,11 @@ export default function Home(): JSX.Element {
               engineering leader.
             </P>
             <P>
-              I’m writing about tech & leadership and enjoy sketchnoting. Join
-              me for insights into the work of an engineering leader and let’s
+              I write about tech & leadership and enjoy sketchnoting. Join me
+              for insights into the work of an engineering leader and let’s
               learn together so that we don’t have to make the same mistakes
               twice. Happy to get to know more about your current interests.
+              <A href="/about">More about me…</A>
             </P>
             <P>
               <LinkedInButton float="right">Get in touch on</LinkedInButton>
