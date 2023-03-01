@@ -5,8 +5,8 @@ const subscribeConfigs = new Map([
   [
     process.env.NEXT_PUBLIC_SUBSCRIBE_ID_WEBSITE,
     {
-      listId: 5,
-      templateId: 1,
+      listId: 6, // Website
+      templateId: 1, // Double Opt-In
       redirectionUrl: 'https://claushoefele.com/newsletter',
     },
   ],
