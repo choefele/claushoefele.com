@@ -1,9 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import * as z from 'zod';
 
-const listId = 5;
-const templateId = 1;
-const redirectionUrl = 'http://localhost:3000/newsletter';
+const subscribeConfigs = new Map([
+  [
+    process.env.NEXT_PUBLIC_SUBSCRIBE_ID_WEBSITE,
+    {
+      listId: 5,
+      templateId: 1,
+      redirectionUrl: 'https://claushoefele.com/newsletter',
+    },
+  ],
+]);
 
 export const subscribeRequestSchema = z.object({
   email: z.string().email(),
@@ -114,10 +121,10 @@ export default async function subscribeHandler(
   const requestData = validation.data;
 
   // Simple check where request came from
-  if (requestData.subscribeId !== process.env.NEXT_PUBLIC_SUBSCRIBE_ID) {
+  const subscribeConfig = subscribeConfigs.get(requestData.subscribeId);
+  if (!subscribeConfig) {
     console.log('Invalid subscribe ID:', {
       subscribeId: requestData.subscribeId,
-      env: process.env.NEXT_PUBLIC_SUBSCRIBE_ID,
     });
 
     res.status(400).end();
@@ -128,9 +135,9 @@ export default async function subscribeHandler(
   const { status, message } = await createContactSiB(
     process.env.SENDINBLUE_API_KEY || '',
     requestData.email,
-    listId,
-    templateId,
-    redirectionUrl
+    subscribeConfig.listId,
+    subscribeConfig.templateId,
+    subscribeConfig.redirectionUrl
   );
 
   if (status >= 300) {

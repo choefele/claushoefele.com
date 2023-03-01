@@ -91,7 +91,7 @@ export default function SubscribeForm() {
           </FormControl>
           <input
             type="hidden"
-            value={process.env.NEXT_PUBLIC_SUBSCRIBE_ID}
+            value={process.env.NEXT_PUBLIC_SUBSCRIBE_ID_WEBSITE}
             {...register('subscribeId')}
           />
         </form>
