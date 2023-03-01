@@ -42,7 +42,7 @@ export default function SubscribeForm() {
   };
 
   return (
-    <Flex alignItems="center" height="5.1rem" overflow="hidden">
+    <Flex alignItems="center" height="5.1rem">
       {subscribed ? (
         <P my="0">
           Thank you for subscribing {subscribed}. Please check your inbox to
