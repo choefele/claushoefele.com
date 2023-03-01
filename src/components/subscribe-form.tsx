@@ -1,8 +1,10 @@
-import { ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {
   Button,
+  Box,
+  Flex,
   FormControl,
   FormErrorMessage,
   FormHelperText,
@@ -39,25 +41,24 @@ export default function SubscribeForm() {
     }
   };
 
-  // Field doesn't turn red reliably when invalid
-  // Show error in proper place - div
-  // Decide landing page after opt in
-  // Set up SiB emails in english
-
   return (
-    <>
+    <Flex alignItems="center" height="5.1rem" overflow="hidden">
       {subscribed ? (
-        <P>
+        <P my="0">
           Thank you for subscribing {subscribed}. Please check your inbox to
           confirm your email.
         </P>
       ) : (
-        <form noValidate onSubmit={handleSubmit(onSubmit)}>
+        <form noValidate style={{ flex: 1 }} onSubmit={handleSubmit(onSubmit)}>
           <FormControl
             isRequired={!subscribeRequestSchema.shape.email.isOptional()}
             isInvalid={!!errors.email}
           >
-            <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
+            <Box height="1.3rem" display="flex" alignItems="center">
+              <FormErrorMessage fontSize="xs" my="0">
+                {errors.email?.message}
+              </FormErrorMessage>
+            </Box>
 
             <InputGroup size="md">
               <Input
@@ -79,12 +80,14 @@ export default function SubscribeForm() {
                 </Button>
               </InputRightElement>
             </InputGroup>
-            <FormHelperText fontSize="xs">
-              We’ll never share your email. Unsubscribe any time.{' '}
-              <A href="https://www.sendinblue.com/legal/privacypolicy/">
-                Privacy policy.
-              </A>
-            </FormHelperText>
+            <Box height="1.3rem" display="flex" alignItems="center">
+              <FormHelperText fontSize="xs" my="0">
+                We’ll never share your email. Unsubscribe any time.{' '}
+                <A href="https://www.sendinblue.com/legal/privacypolicy/">
+                  Privacy policy.
+                </A>
+              </FormHelperText>
+            </Box>
           </FormControl>
           <input
             type="hidden"
@@ -93,6 +96,6 @@ export default function SubscribeForm() {
           />
         </form>
       )}
-    </>
+    </Flex>
   );
 }
