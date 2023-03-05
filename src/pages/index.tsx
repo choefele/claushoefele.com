@@ -61,7 +61,7 @@ export default function Home(): JSX.Element {
           </GridItem>
         </Grid>
 
-        <H2 textAlign="center">🔥 What’s happening right now</H2>
+        {/* <H2 textAlign="center">🔥 What’s happening right now</H2>
         <SimpleGrid mt="1.25rem" columns={3} spacing={10}>
           <Box bg="tomato" height="80px"></Box>
           <Box bg="tomato" height="80px"></Box>
@@ -114,7 +114,7 @@ export default function Home(): JSX.Element {
           <GridItem gridColumn="auto / span 2" h="10" bg="blue.500" />
           <GridItem gridColumn="auto / span 2" h="10" bg="blue.500" />
           <GridItem gridColumn="auto / span 2" h="10" bg="blue.500" />
-        </Grid>
+        </Grid> */}
       </main>
     </>
   );
