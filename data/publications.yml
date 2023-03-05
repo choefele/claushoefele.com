@@ -1,7 +1,7 @@
 ---
 - name: 'Speaking & Writing in 2023'
   publications:
-    - name: 'Leaders in Tech – Retaining Talent @Austin Fraser'
+    - name: 'Leaders in Tech – Retaining Talent @ Austin Fraser'
       date: '2022-02-09'
       description: 'I worked with Katarina and Austin Fraser on the hard-to-fill positions for our ERP systems development. They also organize regular networking events in their fab office near Berlin Zoological Garden. This time, I’m part of a round table discussion on retaining talent.'
       image:
