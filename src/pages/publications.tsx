@@ -8,6 +8,7 @@ import {
   Publication,
   GroupedPublication,
 } from '../load-content-data';
+import { Fragment } from 'react';
 
 export const getStaticProps: GetStaticProps = async () => {
   const groupedPublications = await loadPublications();
@@ -83,8 +84,8 @@ export default function Publications({
         </Box>
         {groupedPublications.map((group) => {
           return (
-            <>
-              <H2 key="group.name" mt="4rem" mb=".25rem">
+            <Fragment key={group.name}>
+              <H2 mt="4rem" mb=".25rem">
                 {group.name}
               </H2>
               <Stack
@@ -99,7 +100,7 @@ export default function Publications({
                   );
                 })}
               </Stack>
-            </>
+            </Fragment>
           );
         })}
       </main>
