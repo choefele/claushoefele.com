@@ -1,4 +1,17 @@
-import { Box, HStack, IconButton, LinkProps, Show } from '@chakra-ui/react';
+import {
+  Box,
+  Drawer,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  DrawerOverlay,
+  HStack,
+  IconButton,
+  LinkProps,
+  Show,
+  useDisclosure,
+} from '@chakra-ui/react';
 import { useRouter, NextRouter } from 'next/router';
 import { A } from './content';
 import { FiMenu } from 'react-icons/fi';
@@ -6,9 +19,9 @@ import { FiMenu } from 'react-icons/fi';
 type Tab = { name: string; href: string };
 const tabs: Tab[] = [
   { name: 'How to Lead', href: '/newsletter' },
-  // { name: 'Tools & Goodies', href: '/resources' },
+  { name: 'Tools & Goodies', href: '/resources' },
   { name: 'Speaking & Writing', href: '/publications' },
-  // { name: 'About', href: '/about' },
+  { name: 'About', href: '/about' },
 ];
 
 export default function Header(): JSX.Element {
@@ -17,14 +30,7 @@ export default function Header(): JSX.Element {
   return (
     <Box as="header" py="1rem">
       <Box as="nav">
-        <HStack
-          as="ul"
-          justify="space-between"
-          fontSize="md"
-          fontWeight="bold"
-          listStyleType="none"
-          height="3rem"
-        >
+        <HStack as="ul" justify="space-between" height="3rem">
           <NavItem href="/" active={false} _hover={{ textDecoration: '' }}>
             Claus Höfele
           </NavItem>
@@ -49,7 +55,7 @@ function NavItem({
   active: boolean;
 }): JSX.Element {
   return (
-    <Box as="li">
+    <Box as="li" listStyleType="none" fontWeight="bold" fontSize="md">
       <A href={href} textDecoration={active ? 'underline' : ''} {...props}>
         {children}
       </A>
@@ -86,11 +92,38 @@ function CompactMenu({
   tabs: Tab[];
   router: NextRouter;
 }): JSX.Element {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <IconButton
-      variant="ghost"
-      icon={<FiMenu fontSize="1.5rem" />}
-      aria-label="Open Menu"
-    />
+    <>
+      <IconButton
+        variant="ghost"
+        icon={<FiMenu fontSize="1.5rem" />}
+        aria-label={'Open Navigation'}
+        onClick={onOpen}
+      />
+      <Drawer placement="right" isOpen={isOpen} onClose={onClose}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton mt=".2rem" size="lg" />
+          <DrawerHeader borderBottomWidth="1px" fontWeight="bold">
+            Navigation
+          </DrawerHeader>
+
+          <DrawerBody as="ul">
+            {tabs.map((tab) => (
+              <NavItem
+                key={tab.name}
+                href={tab.href}
+                active={router.asPath === tab.href}
+                onClick={onClose}
+              >
+                {tab.name}
+              </NavItem>
+            ))}
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    </>
   );
 }
