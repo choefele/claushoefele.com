@@ -46,6 +46,7 @@ export default function Home(): JSX.Element {
             gridRow="1"
             gridColumn={{ base: 1, md: 2 }}
             ps={{ base: 0, md: '2rem' }}
+            pb={{ base: '1rem', md: 0 }}
           >
             <Center>
               <VStack>
