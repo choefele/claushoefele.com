@@ -42,6 +42,7 @@ export type Post = {
 
 type PostMetadata = {
   title: string;
+  slug: string;
 };
 
 export async function loadPosts(): Promise<Post[]> {

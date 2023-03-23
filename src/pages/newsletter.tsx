@@ -1,12 +1,10 @@
-import { ChangeEvent, useState } from 'react';
 import Head from 'next/head';
-import { H1, H2, P } from '../components/content';
+import { H1, H2, P, A } from '../components/content';
 import SubscribeForm from '../components/subscribe-form';
 import { loadPosts, Post } from '../load-content-data';
 
 export default function Newsletter({ posts }: { posts: Post[] }) {
   const dev = process.env.NODE_ENV == 'development';
-  console.log({ dev });
 
   return (
     <>
@@ -19,7 +17,15 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
         <SubscribeForm />
         <ul>
           {posts.map((post) => {
-            return dev && <li key={post.filePath}>{post.metadata.title}</li>;
+            return (
+              dev && (
+                <li key={post.filePath}>
+                  <A href={`newsletter/${post.metadata.slug}`}>
+                    {post.metadata.title}
+                  </A>
+                </li>
+              )
+            );
           })}
         </ul>
       </main>
