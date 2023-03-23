@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { H1, H2, P, A } from '../components/content';
 import LinkedInButton from '../components/linked-in-button';
+import profileImage from '../../public/claus.jpeg';
 
 export default function Home(): JSX.Element {
   return (
@@ -54,8 +55,8 @@ export default function Home(): JSX.Element {
                   alt="Claus Höfele"
                   border="1px solid lightgray"
                   borderRadius="full"
-                  src="/claus.jpeg"
-                  w={{ base: '30%', md: '100%' }}
+                  src={profileImage.src}
+                  w={{ base: '10.25rem', md: '18rem' }}
                 />
               </VStack>
             </Center>
