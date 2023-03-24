@@ -11,7 +11,7 @@ import {
 import { Fragment } from 'react';
 
 interface Props {
-  publication: Publication;
+  groupedPublications: GroupedPublication[];
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -22,7 +22,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const Row = ({ publication }: Props) => (
+const Row = ({ publication }: { publication: Publication }) => (
   <Flex justifyContent="flex-start" alignItems="stretch">
     {publication.image && (
       <Image
@@ -52,9 +52,7 @@ const Row = ({ publication }: Props) => (
 
 export default function Publications({
   groupedPublications,
-}: {
-  groupedPublications: GroupedPublication[];
-}): JSX.Element {
+}: Props): JSX.Element {
   return (
     <>
       <Head>
