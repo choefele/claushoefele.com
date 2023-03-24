@@ -63,3 +63,9 @@ export async function loadPosts(): Promise<Post[]> {
 
   return Promise.all(posts);
 }
+
+export async function loadPost(slug: string): Promise<Post | undefined> {
+  const posts = await loadPosts();
+  const postWithslug = posts.find(async (post) => post.metadata.slug === slug);
+  return postWithslug;
+}
