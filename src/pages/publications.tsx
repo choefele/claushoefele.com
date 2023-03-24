@@ -10,7 +10,11 @@ import {
 } from '../load-content-data';
 import { Fragment } from 'react';
 
-export const getStaticProps: GetStaticProps = async () => {
+interface Props {
+  publication: Publication;
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const groupedPublications = await loadPublications();
 
   return {
@@ -18,7 +22,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Row = ({ publication }: { publication: Publication }) => (
+const Row = ({ publication }: Props) => (
   <Flex justifyContent="flex-start" alignItems="stretch">
     {publication.image && (
       <Image

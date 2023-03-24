@@ -35,7 +35,7 @@ export async function loadPublications(): Promise<GroupedPublication[]> {
 }
 
 export type Post = {
-  content: string;
+  source: string;
   filePath: string;
   metadata: PostMetadata;
 };
@@ -55,7 +55,7 @@ export async function loadPosts(): Promise<Post[]> {
     );
     const { content, data } = matter(fileContents);
     return {
-      content,
+      source: content,
       filePath,
       metadata: data as PostMetadata,
     };
