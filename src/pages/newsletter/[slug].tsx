@@ -1,11 +1,34 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { Alert } from '@chakra-ui/react';
 import { serialize } from 'next-mdx-remote/serialize';
-import { H1, H2, P, A } from '../../components/content';
+import * as content from '../../components/content';
 import { loadPost, loadPosts, Post } from '../../load-content-data';
 
-const components = {};
+// See also https://github.com/chakra-ui/chakra-ui-docs/blob/main/src/components/mdx-components/mdx-components.tsx
+const mdxComponents = {
+  h1: content.H1,
+  h2: content.H2,
+  h3: content.H3,
+  h4: content.H4,
+  p: content.P,
+  a: content.A,
+  blockquote: (props) => (
+    <Alert
+      mt="4"
+      role="none"
+      status="warning"
+      variant="left-accent"
+      as="blockquote"
+      rounded="4px"
+      my="1.5rem"
+      {...props}
+    />
+  ),
+  // hr, strong, ul, ol, li, blockquote, em
+  // subscribe / interjection
+};
 
 interface Props {
   mdxSource: MDXRemoteSerializeResult;
@@ -24,7 +47,7 @@ export default function Page({ mdxSource, post }: Props) {
       </Head>
 
       <main>
-        <MDXRemote {...mdxSource} components={components} />
+        <MDXRemote {...mdxSource} components={mdxComponents} />
       </main>
     </>
   );
