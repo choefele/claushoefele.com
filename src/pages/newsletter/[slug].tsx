@@ -14,18 +14,18 @@ const mdxComponents = {
   h4: content.H4,
   p: content.P,
   a: content.A,
-  blockquote: (props) => (
-    <Alert
-      mt="4"
-      role="none"
-      status="warning"
-      variant="left-accent"
-      as="blockquote"
-      rounded="4px"
-      my="1.5rem"
-      {...props}
-    />
-  ),
+  // blockquote: (props) => (
+  //   <Alert
+  //     mt="4"
+  //     role="none"
+  //     status="warning"
+  //     variant="left-accent"
+  //     as="blockquote"
+  //     rounded="4px"
+  //     my="1.5rem"
+  //     {...props}
+  //   />
+  // ),
   // hr, strong, ul, ol, li, blockquote, em
   // subscribe / interjection
 };
