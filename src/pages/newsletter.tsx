@@ -7,11 +7,15 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
   return (
     <>
       <Head>
-        <title>Claus Höfele - Newsletter</title>
+        <title>Claus Höfele - Drawn to Leadership</title>
       </Head>
 
       <main>
-        <H1>Newsletter</H1>
+        <H1>Drawn to Leadership</H1>
+        <P fontSize="lg" fontWeight="bold">
+          Discover new ways to become a better engineering leader – one
+          sketchnote at a time.
+        </P>
         <SubscribeForm />
         <ul>
           {posts.map((post) => {
