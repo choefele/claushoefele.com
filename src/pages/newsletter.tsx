@@ -13,8 +13,8 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
       <main>
         <H1>Drawn to Leadership</H1>
         <P fontSize="lg" fontWeight="bold">
-          Discover new ways to become a better engineering leader – one
-          sketchnote at a time.
+          Discover concepts and tools for engineering leaders – one sketchnote
+          at a time.
         </P>
         <SubscribeForm />
         <ul>
