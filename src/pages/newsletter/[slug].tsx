@@ -38,7 +38,7 @@ interface Props {
 export default function Page({ mdxSource, post }: Props) {
   // Avoids "Warning: A title element received an array..." because
   // https://github.com/vercel/next.js/discussions/38256#discussioncomment-3070196
-  const title = `Claus Höfele - ${post.metadata.title}`;
+  const title = `${post.metadata.title} | Claus Höfele`;
 
   return (
     <>

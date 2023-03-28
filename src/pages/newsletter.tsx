@@ -14,7 +14,7 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
   return (
     <>
       <Head>
-        <title>Claus Höfele - Drawn to Leadership</title>
+        <title>Drawn to Leadership | Claus Höfele</title>
       </Head>
 
       <main>

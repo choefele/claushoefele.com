@@ -5,7 +5,7 @@ export default function ContentComponents(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Claus Höfele - Content components test page</title>
+        <title>Content components test page | Claus Höfele</title>
       </Head>
 
       <main>

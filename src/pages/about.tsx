@@ -5,7 +5,7 @@ export default function About(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Claus Höfele - About me</title>
+        <title>About | Claus Höfele</title>
       </Head>
 
       <main>

@@ -5,7 +5,7 @@ export default function Resources(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Claus Höfele - Resources</title>
+        <title>Resources | Claus Höfele</title>
       </Head>
 
       <main>

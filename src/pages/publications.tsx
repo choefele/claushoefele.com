@@ -56,7 +56,7 @@ export default function Publications({
   return (
     <>
       <Head>
-        <title>Claus Höfele - Speaking & Writing</title>
+        <title>Speaking & Writing | Claus Höfele</title>
       </Head>
 
       <main>
