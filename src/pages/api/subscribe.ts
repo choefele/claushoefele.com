@@ -69,11 +69,12 @@ async function createContactSiB(
     Accept: 'application/json',
     'Api-Key': apiKey,
   });
+  const emailBase64 = Buffer.from(email).toString('base64');
   const body = {
     includeListIds: [listId],
     email: email,
     templateId: templateId,
-    redirectionUrl: redirectionUrl,
+    redirectionUrl: `${redirectionUrl}?e=${emailBase64}`,
   };
 
   let status: number;

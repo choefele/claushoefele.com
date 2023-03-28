@@ -19,8 +19,22 @@ import {
   subscribeEmail,
 } from '../pages/api/subscribe';
 
-export default function SubscribeForm() {
-  const [subscribed, setSubscribed] = useState('');
+export default function SubscribeForm({
+  optedInEmail,
+}: {
+  optedInEmail?: string;
+}) {
+  const [subscribedEmail, setSubscribedEmail] = useState('');
+  let message: string | undefined;
+  if (optedInEmail) {
+    // User completed opt-in successfully
+    message = `Welcome – you are on the list with ${optedInEmail}!`;
+  } else if (subscribedEmail) {
+    // User started opt-in process
+    message = `Thank you for subscribing ${subscribedEmail}. Please check your inbox
+    to confirm your email address.`;
+  }
+
   const {
     handleSubmit,
     register,
@@ -37,17 +51,14 @@ export default function SubscribeForm() {
         message: 'Error subscribing – please try again',
       });
     } else {
-      setSubscribed(data.email);
+      setSubscribedEmail(data.email);
     }
   };
 
   return (
     <Flex alignItems="center" height="5.1rem">
-      {subscribed ? (
-        <P my="0">
-          Thank you for subscribing {subscribed}. Please check your inbox to
-          confirm your email.
-        </P>
+      {message ? (
+        <P my="0">{message}</P>
       ) : (
         <form noValidate style={{ flex: 1 }} onSubmit={handleSubmit(onSubmit)}>
           <FormControl
