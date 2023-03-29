@@ -1,4 +1,11 @@
-import { HTMLChakraProps, Link, LinkProps, chakra } from '@chakra-ui/react';
+import {
+  HTMLChakraProps,
+  Alert,
+  AlertProps,
+  Link,
+  LinkProps,
+  chakra,
+} from '@chakra-ui/react';
 import React from 'react';
 import NextLink from 'next/link';
 import LinkedHeading from './linked-heading';
@@ -31,14 +38,30 @@ export function A(props: LinkProps) {
   );
 }
 
-export function UL(props: HTMLChakraProps<'ul'>) {
+export function Ul(props: HTMLChakraProps<'ul'>) {
   return <chakra.ul apply="content.ul" {...props} />;
 }
 
-export function OL(props: HTMLChakraProps<'ol'>) {
+export function Ol(props: HTMLChakraProps<'ol'>) {
   return <chakra.ol apply="content.ol" {...props} />;
 }
 
-export function LI(props: HTMLChakraProps<'li'>) {
+export function Li(props: HTMLChakraProps<'li'>) {
   return <chakra.li apply="content.li" {...props} />;
+}
+
+export function Blockquote(props: HTMLChakraProps<'blockquote'>) {
+  return (
+    <Alert
+      mt="4"
+      role="none"
+      variant="left-accent"
+      as="blockquote"
+      rounded="4px"
+      my="1.5rem"
+      bg="gray.50"
+      borderStartColor="gray.500"
+      {...(props as AlertProps)}
+    />
+  );
 }

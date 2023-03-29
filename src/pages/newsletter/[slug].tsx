@@ -1,7 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { Alert } from '@chakra-ui/react';
 import { serialize } from 'next-mdx-remote/serialize';
 import * as content from '../../components/content';
 import { loadPost, loadPosts, Post } from '../../load-content-data';
@@ -14,23 +13,12 @@ const mdxComponents = {
   h4: content.H4,
   p: content.P,
   a: content.A,
-  ul: content.UL,
-  ol: content.OL,
-  li: content.LI,
-  // blockquote: (props) => (
-  //   <Alert
-  //     mt="4"
-  //     role="none"
-  //     status="warning"
-  //     variant="left-accent"
-  //     as="blockquote"
-  //     rounded="4px"
-  //     my="1.5rem"
-  //     {...props}
-  //   />
-  // ),
-  // hr, strong, ul, ol, li, blockquote, em
-  // subscribe / interjection
+  ul: content.Ul,
+  ol: content.Ol,
+  li: content.Li,
+  blockquote: content.Blockquote,
+
+  // hr, strong, em, br
 };
 
 interface Props {
