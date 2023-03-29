@@ -50,12 +50,13 @@ function NavItem({
   active,
   href,
   children,
+  my,
   ...props
 }: LinkProps & {
   active: boolean;
 }): JSX.Element {
   return (
-    <Box as="li" listStyleType="none" fontWeight="bold" fontSize="md">
+    <Box as="li" listStyleType="none" fontWeight="bold" fontSize="md" my={my}>
       <A href={href} textDecoration={active ? 'underline' : ''} {...props}>
         {children}
       </A>
@@ -117,6 +118,7 @@ function CompactMenu({
                 href={tab.href}
                 active={router.asPath === tab.href}
                 onClick={onClose}
+                my="1rem"
               >
                 {tab.name}
               </NavItem>
