@@ -57,6 +57,7 @@ export function Blockquote(props: HTMLChakraProps<'blockquote'>) {
       role="none"
       variant="left-accent"
       as="blockquote"
+      display="block"
       rounded="4px"
       my="1.5rem"
       bg="gray.50"

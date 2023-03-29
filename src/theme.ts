@@ -61,7 +61,7 @@ const customTheme = extendTheme({
       letterSpacing: '-.025em',
     },
     h2: {
-      mt: '4rem',
+      mt: '3rem',
       mb: '0.5rem',
       lineHeight: 1.3,
       fontWeight: 'semibold',
@@ -69,6 +69,9 @@ const customTheme = extendTheme({
       letterSpacing: '-.025em',
       '& + h3': {
         mt: '1.5rem',
+      },
+      'blockquote &:first-child': {
+        mt: 0,
       },
     },
     h3: {
@@ -78,12 +81,18 @@ const customTheme = extendTheme({
       fontWeight: 'semibold',
       fontSize: '1.25rem',
       letterSpacing: '-.025em',
+      'blockquote &:first-child': {
+        mt: 0,
+      },
     },
     h4: {
       mt: '3rem',
       lineHeight: 1.375,
       fontWeight: 'semibold',
       fontSize: '1.125rem',
+      'blockquote &:first-child': {
+        mt: 0,
+      },
     },
     a: {
       fontWeight: 'semibold',
@@ -91,7 +100,7 @@ const customTheme = extendTheme({
     p: {
       mt: '1.25rem',
       lineHeight: 1.7,
-      'blockquote &': {
+      'blockquote &:first-child': {
         mt: 0,
       },
     },
