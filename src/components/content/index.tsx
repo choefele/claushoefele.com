@@ -65,3 +65,7 @@ export function Blockquote(props: HTMLChakraProps<'blockquote'>) {
     />
   );
 }
+
+export function Hr(props: HTMLChakraProps<'hr'>) {
+  return <chakra.hr apply="content.hr" {...props} />;
+}

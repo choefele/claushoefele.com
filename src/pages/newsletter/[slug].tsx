@@ -17,8 +17,8 @@ const mdxComponents = {
   ol: content.Ol,
   li: content.Li,
   blockquote: content.Blockquote,
-
-  // hr, strong, em, br
+  hr: content.Hr,
+  // strong, em, br
 };
 
 interface Props {
