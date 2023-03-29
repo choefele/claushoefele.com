@@ -43,12 +43,9 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
 export async function getStaticProps() {
   const posts = await loadPosts();
 
-  // Ignore test and draft posts in the list. They exist at their slug, though.
+  // Ignore draft posts in the list. They exist at their slug, though.
   const filteredPosts = posts.filter((post) => {
-    return (
-      post.metadata.title !== undefined &&
-      post.metadata.slug !== 'test-components'
-    );
+    return post.metadata.title !== undefined;
   });
 
   return { props: { posts: filteredPosts } };
