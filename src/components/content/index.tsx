@@ -25,7 +25,7 @@ export function P(props: HTMLChakraProps<'p'>) {
 
 export function A(props: LinkProps) {
   return (
-    <Link as={NextLink} {...props}>
+    <Link as={NextLink} apply="content.a" {...props}>
       {props.children}
     </Link>
   );

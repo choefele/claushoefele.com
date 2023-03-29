@@ -3,6 +3,9 @@ import { Inter } from '@next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
+// Chakra UI docs theme: https://github.com/chakra-ui/chakra-ui-docs/blob/main/theme.ts
+// MDX Components: https://github.com/chakra-ui/chakra-ui-docs/blob/main/src/components/mdx-components/mdx-components.tsx
+
 const customTheme = extendTheme({
   config: {},
   semanticTokens: {
@@ -83,13 +86,7 @@ const customTheme = extendTheme({
       fontSize: '1.125rem',
     },
     a: {
-      color: 'accent',
       fontWeight: 'semibold',
-      transition: 'color 0.15s',
-      transitionTimingFunction: 'ease-out',
-      _hover: {
-        color: 'teal.600',
-      },
     },
     p: {
       mt: '1.25rem',
