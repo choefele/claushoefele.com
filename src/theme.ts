@@ -115,6 +115,14 @@ const customTheme = extendTheme({
         mt: '0.25rem',
       },
     },
+    ol: {
+      mt: '0.5rem',
+      ml: '1.50rem',
+      'blockquote &': { mt: 0 },
+      '& > * + *': {
+        mt: '0.25rem',
+      },
+    },
     code: {
       rounded: 'sm',
       px: '1',

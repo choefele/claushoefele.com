@@ -14,6 +14,9 @@ const mdxComponents = {
   h4: content.H4,
   p: content.P,
   a: content.A,
+  ul: content.UL,
+  ol: content.OL,
+  li: content.LI,
   // blockquote: (props) => (
   //   <Alert
   //     mt="4"

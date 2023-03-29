@@ -30,3 +30,15 @@ export function A(props: LinkProps) {
     </Link>
   );
 }
+
+export function UL(props: HTMLChakraProps<'ul'>) {
+  return <chakra.ul apply="content.ul" {...props} />;
+}
+
+export function OL(props: HTMLChakraProps<'ol'>) {
+  return <chakra.ol apply="content.ol" {...props} />;
+}
+
+export function LI(props: HTMLChakraProps<'li'>) {
+  return <chakra.li apply="content.li" {...props} />;
+}
