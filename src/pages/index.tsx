@@ -36,8 +36,7 @@ export default function Home(): JSX.Element {
               I write about tech & leadership and enjoy sketchnoting. Join me
               for insights into the work of an engineering leader and let’s
               learn together so that we don’t have to make the same mistakes
-              twice. Happy to get to know more about your current interests.{' '}
-              <A href="/about">More about me…</A>
+              twice. Happy to get to know more about your current interests.
             </P>
             <P>
               <LinkedInButton float="right">Get in touch on</LinkedInButton>
