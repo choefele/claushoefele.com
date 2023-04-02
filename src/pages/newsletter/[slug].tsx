@@ -3,7 +3,8 @@ import Head from 'next/head';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import * as content from '../../components/content';
-import { A } from '../../components/content';
+import { A, P } from '../../components/content';
+import SubscribeForm from '../../components/subscribe-form';
 import { loadPost, loadPosts, Post } from '../../load-content-data';
 
 // See also https://github.com/chakra-ui/chakra-ui-docs/blob/main/src/components/mdx-components/mdx-components.tsx
@@ -60,6 +61,20 @@ export default function Page({ mdxSource, post }: Props) {
       <main>
         <A href="../newsletter">{'<'} More articles...</A>
         <MDXRemote {...mdxSource} components={mdxComponents} />
+
+        <P
+          border="1px solid lightgray"
+          borderRadius="md"
+          p="0.5rem"
+          background="gray.50"
+          mt="2rem"
+        >
+          {' '}
+          <strong>More of this?</strong> Subscribe to{' '}
+          <em>Drawn to Leadership</em> to receive email notifications about new
+          articles:
+          <SubscribeForm />
+        </P>
       </main>
     </>
   );
