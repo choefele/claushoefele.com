@@ -58,7 +58,7 @@ export default function Page({ mdxSource, post }: Props) {
       </Head>
 
       <main>
-        <A href="../newsletter">{'<'} Back to index</A>
+        <A href="../newsletter">{'<'} More articles...</A>
         <MDXRemote {...mdxSource} components={mdxComponents} />
       </main>
     </>
