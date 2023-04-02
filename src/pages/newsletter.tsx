@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { H1, H2, P, A } from '../components/content';
+import { H1, H2, P, A, Ul, Li } from '../components/content';
 import SubscribeForm from '../components/subscribe-form';
 import { loadPosts, Post } from '../load-content-data';
 
@@ -24,17 +24,17 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
           at a time.
         </P>
         <SubscribeForm optedInEmail={email} />
-        <ul>
+        <Ul mt="1rem">
           {posts.map((post) => {
             return (
-              <li key={post.filePath}>
+              <Li key={post.filePath}>
                 <A href={`newsletter/${post.metadata.slug}`}>
                   {post.metadata.title}
                 </A>
-              </li>
+              </Li>
             );
           })}
-        </ul>
+        </Ul>
       </main>
     </>
   );
