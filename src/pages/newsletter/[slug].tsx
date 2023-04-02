@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { Box } from '@chakra-ui/react';
 import { serialize } from 'next-mdx-remote/serialize';
 import * as content from '../../components/content';
 import { A, P } from '../../components/content';
@@ -62,19 +63,20 @@ export default function Page({ mdxSource, post }: Props) {
         <A href="../newsletter">{'<'} More articles...</A>
         <MDXRemote {...mdxSource} components={mdxComponents} />
 
-        <P
+        <Box
           border="1px solid lightgray"
           borderRadius="md"
-          p="0.5rem"
+          p="1rem"
           background="gray.50"
           mt="2rem"
         >
-          {' '}
-          <strong>More of this?</strong> Subscribe to{' '}
-          <em>Drawn to Leadership</em> to receive email notifications about new
-          articles:
+          <P my="0">
+            <strong>More of this?</strong> Subscribe to{' '}
+            <em>Drawn to Leadership</em> to receive email notifications about
+            new articles:
+          </P>
           <SubscribeForm />
-        </P>
+        </Box>
       </main>
     </>
   );
