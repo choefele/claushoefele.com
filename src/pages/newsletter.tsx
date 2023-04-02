@@ -23,11 +23,18 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
           Discover concepts and tools for engineering leaders – one sketchnote
           at a time.
         </P>
-        <P>
+        <P
+          border="1px solid lightgray"
+          borderRadius="md"
+          p="0.5rem"
+          background="gray.50"
+          mt="2rem"
+        >
+          {' '}
           Subscribe to <em>Drawn to Leadership</em> to receive email
           notifications about new articles:
+          <SubscribeForm optedInEmail={email} />
         </P>
-        <SubscribeForm optedInEmail={email} />
         <H2>List of Articles</H2>
         <Ul>
           {posts.map((post) => {
