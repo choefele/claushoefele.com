@@ -41,6 +41,7 @@ export default function Page({ mdxSource, post }: Props) {
 
         {/* Twitter */}
         <meta name="twitter:creator" content={'@claushoefele'} />
+        <meta name="twitter:card" content="summary_large_image" />
 
         {/* Open Graph */}
         <meta
