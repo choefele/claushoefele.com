@@ -37,7 +37,7 @@ const Row = ({ publication }: { publication: Publication }) => (
       />
     )}
     <Flex flex={1} flexDirection="column">
-      <H3 mt="0">{publication.name}</H3>
+      <H3 mt="0">{publication.title}</H3>
       <P mt={0}>{publication.description}</P>
       {publication.action && (
         <Stack justifyContent="flex-end" isInline>
@@ -98,7 +98,7 @@ export default function Publications({
               >
                 {group.publications.map((publication) => {
                   return (
-                    <Row key={publication.name} publication={publication} />
+                    <Row key={publication.title} publication={publication} />
                   );
                 })}
               </Stack>

@@ -2,13 +2,8 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import matter from 'gray-matter';
 
-export type Book = {
-  name: string;
-  authors: string;
-};
-
 export type Publication = {
-  name: string;
+  title: string;
   date: string; // to keep it JSON
   description: string;
   image?: {
@@ -43,6 +38,11 @@ export type Post = {
 type PostMetadata = {
   title: string;
   slug: string;
+  description: string;
+  image?: {
+    alt: string;
+    url: string;
+  };
 };
 
 export async function loadPosts(): Promise<Post[]> {
