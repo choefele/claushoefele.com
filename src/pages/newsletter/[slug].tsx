@@ -37,6 +37,7 @@ export default function Page({ mdxSource, post }: Props) {
       <Head>
         <title>{title}</title>
         <meta name="description" content={post.metadata.description}></meta>
+        <meta name="author" content="Claus Höfele"></meta>
 
         {/* Twitter */}
         <meta name="twitter:creator" content={'@claushoefele'} />
