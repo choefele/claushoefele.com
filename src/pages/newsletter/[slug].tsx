@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import * as content from '../../components/content';
+import { A } from '../../components/content';
 import { loadPost, loadPosts, Post } from '../../load-content-data';
 
 // See also https://github.com/chakra-ui/chakra-ui-docs/blob/main/src/components/mdx-components/mdx-components.tsx
@@ -38,6 +39,7 @@ export default function Page({ mdxSource, post }: Props) {
       </Head>
 
       <main>
+        <A href="../newsletter">{'<'} Back to index</A>
         <MDXRemote {...mdxSource} components={mdxComponents} />
       </main>
     </>
