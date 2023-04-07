@@ -38,8 +38,8 @@ export default function Page({ mdxSource, post }: Props) {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={post.metadata.description}></meta>
-        <meta name="author" content="Claus Höfele"></meta>
+        <meta name="description" content={post.metadata.description} />
+        <meta name="author" content="Claus Höfele" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -48,6 +48,7 @@ export default function Page({ mdxSource, post }: Props) {
         <meta name="twitter:title" content={post.metadata.title} />
 
         {/* Open Graph */}
+        <meta property="og:type" content="article" />
         <meta
           property="og:url"
           content={`https://claushoefele.com/newsletter/${post.metadata.slug}`}
