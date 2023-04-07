@@ -57,7 +57,7 @@ function NavItem({
 }): JSX.Element {
   return (
     <Box as="li" listStyleType="none" fontWeight="bold" fontSize="md" my={my}>
-      <A href={href} textDecoration={active ? 'underline' : ''} {...props}>
+      <A href={href} textDecoration={active ? 'underline' : 'none'} {...props}>
         {children}
       </A>
     </Box>
@@ -77,7 +77,7 @@ function FullMenu({
         <NavItem
           key={tab.name}
           href={tab.href}
-          active={router.asPath === tab.href}
+          active={router.asPath.startsWith(tab.href)}
         >
           {tab.name}
         </NavItem>
@@ -116,7 +116,7 @@ function CompactMenu({
               <NavItem
                 key={tab.name}
                 href={tab.href}
-                active={router.asPath === tab.href}
+                active={router.asPath.startsWith(tab.href)}
                 onClick={onClose}
                 my="1rem"
               >

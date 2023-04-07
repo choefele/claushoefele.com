@@ -95,7 +95,7 @@ const customTheme = extendTheme({
       },
     },
     a: {
-      fontWeight: 'semibold',
+      'text-decoration': 'underline',
     },
     p: {
       mt: '1.25rem',
