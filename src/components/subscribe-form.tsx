@@ -56,7 +56,7 @@ export default function SubscribeForm({
   };
 
   return (
-    <Flex alignItems="center" height="5.1rem">
+    <Flex alignItems="center">
       {message ? (
         <P my="0">{message}</P>
       ) : (
@@ -91,8 +91,8 @@ export default function SubscribeForm({
                 </Button>
               </InputRightElement>
             </InputGroup>
-            <Box height="1.3rem" display="flex" alignItems="center">
-              <FormHelperText fontSize="xs" my="0">
+            <Box display="flex" alignItems="center">
+              <FormHelperText fontSize="xs" my=".2rem">
                 We’ll never share your email. Unsubscribe any time.{' '}
                 <A href="https://www.sendinblue.com/legal/privacypolicy/">
                   Privacy policy.
