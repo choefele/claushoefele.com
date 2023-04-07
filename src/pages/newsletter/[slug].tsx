@@ -22,6 +22,7 @@ const mdxComponents = {
   blockquote: content.Blockquote,
   hr: content.Hr,
   // strong, em, br
+  SubscribeBox,
 };
 
 interface Props {
