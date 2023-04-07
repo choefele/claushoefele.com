@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Box } from '@chakra-ui/react';
 import { H1, H2, P, A, Ul, Li } from '../components/content';
-import SubscribeForm from '../components/subscribe-form';
+import SubscribeBox from '../components/subscribe-box';
 import { loadPosts, Post } from '../load-content-data';
 
 export default function Newsletter({ posts }: { posts: Post[] }) {
@@ -24,20 +24,7 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
           Discover concepts and tools for engineering leaders – one sketchnote
           at a time.
         </P>
-        <Box
-          border="1px solid lightgray"
-          borderRadius="md"
-          p="1rem"
-          background="gray.50"
-          mt="2rem"
-        >
-          <P my="0">
-            <strong>Be the first to know.</strong> Subscribe to{' '}
-            <em>Drawn to Leadership</em> to receive email notifications about
-            new articles:
-          </P>
-          <SubscribeForm optedInEmail={email} />
-        </Box>
+        <SubscribeBox message="Be the first to know." optedInEmail={email} />
         <H2>List of Articles</H2>
         <Ul>
           {posts.map((post) => {
