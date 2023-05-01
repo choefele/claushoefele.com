@@ -31,7 +31,7 @@ export default function Header(): JSX.Element {
     <Box as="header" py="1rem">
       <Box as="nav">
         <HStack as="ul" justify="space-between" height="3rem">
-          <NavItem href="/" active={false} _hover={{ textDecoration: '' }}>
+          <NavItem href="/" active={false} _hover={{ textDecoration: 'none' }}>
             Claus Höfele
           </NavItem>
           <Show above="md">
