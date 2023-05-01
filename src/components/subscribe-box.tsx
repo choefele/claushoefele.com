@@ -20,7 +20,7 @@ export default function SubscribeBox({
       <P my="0">
         {message && <strong>{message + ' '}</strong>}
         Subscribe to <em>Drawn to Leadership</em> to receive email notifications
-        about new articles.
+        about new issues.
       </P>
       <SubscribeForm optedInEmail={optedInEmail} />
     </Box>

@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Box } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 import { H1, H2, P, A, Ul, Li } from '../components/content';
 import SubscribeBox from '../components/subscribe-box';
+import ArticleCard from '../components/article-card';
 import { loadPosts, Post } from '../load-content-data';
 
 export default function Newsletter({ posts }: { posts: Post[] }) {
@@ -25,8 +26,8 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
           at a time.
         </P>
         <SubscribeBox message="Be the first to know." optedInEmail={email} />
-        <H2>List of Articles</H2>
-        <Ul>
+        <H2>Latest Issues</H2>
+        {/* <Ul>
           {posts.map((post) => {
             return (
               <Li key={post.filePath}>
@@ -36,7 +37,27 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
               </Li>
             );
           })}
-        </Ul>
+        </Ul> */}
+        <SimpleGrid
+          as="ul"
+          listStyleType="none"
+          spacing={4}
+          columns={{ base: 1, md: 2, lg: 3 }}
+        >
+          {posts.map((post) => {
+            return (
+              <Li key={post.filePath}>
+                <A
+                  textDecoration="none"
+                  _hover={{ textDecoration: 'none' }}
+                  href={`newsletter/${post.metadata.slug}`}
+                >
+                  <ArticleCard {...post.metadata} />
+                </A>
+              </Li>
+            );
+          })}
+        </SimpleGrid>
       </main>
     </>
   );

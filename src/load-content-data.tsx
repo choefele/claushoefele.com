@@ -6,7 +6,7 @@ export type Publication = {
   title: string;
   date: string; // to keep it JSON
   description: string;
-  image?: {
+  image: {
     alt: string;
     url: string;
   };
@@ -35,8 +35,9 @@ export type Post = {
   metadata: PostMetadata;
 };
 
-type PostMetadata = {
+export type PostMetadata = {
   title: string;
+  subtitle: string;
   slug: string;
   description: string;
   image?: {
