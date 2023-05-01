@@ -48,18 +48,20 @@ type PostMetadata = {
 export async function loadPosts(): Promise<Post[]> {
   const dataDir = path.join(process.cwd(), 'data/posts');
   const dirContents = await fs.readdir(dataDir, 'utf8');
-  const posts = dirContents.map(async (filePath) => {
-    const fileContents = await fs.readFile(
-      path.join(dataDir, filePath),
-      'utf8'
-    );
-    const { content, data } = matter(fileContents);
-    return {
-      source: content,
-      filePath,
-      metadata: data as PostMetadata,
-    };
-  });
+  const posts = dirContents
+    .filter((file) => file.toLowerCase().endsWith('.mdx'))
+    .map(async (filePath) => {
+      const fileContents = await fs.readFile(
+        path.join(dataDir, filePath),
+        'utf8'
+      );
+      const { content, data } = matter(fileContents);
+      return {
+        source: content,
+        filePath,
+        metadata: data as PostMetadata,
+      };
+    });
 
   return Promise.all(posts);
 }
