@@ -66,8 +66,9 @@ export default function Publications({
         <P>
           Over time, I’ve contributed to a number of publicly available
           resources that mix my ideas with those of others. Please{' '}
-          <A href="/about">reach out</A> if you have a podcast, round table, or
-          conference where I might be able to contribute.
+          <A href="https://www.linkedin.com/in/claushoefele/">reach out</A> if
+          you have a podcast, round table, or conference where I might be able
+          to contribute.
         </P>
         <Box
           mt="4rem"
