@@ -73,6 +73,7 @@ export default function SubscribeForm({
 
             <InputGroup size="md">
               <Input
+                backgroundColor="white"
                 id="email"
                 type="email"
                 placeholder="Your best email"
