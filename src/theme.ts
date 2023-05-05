@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
-import { Inter } from '@next/font/google';
+import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -70,7 +70,7 @@ const customTheme = extendTheme({
       '& + h3': {
         mt: '1.5rem',
       },
-      'blockquote &:first-child': {
+      'blockquote &:first-of-type': {
         mt: 0,
       },
     },
@@ -81,7 +81,7 @@ const customTheme = extendTheme({
       fontWeight: 'semibold',
       fontSize: '1.25rem',
       letterSpacing: '-.025em',
-      'blockquote &:first-child': {
+      'blockquote &:first-of-type': {
         mt: 0,
       },
     },
@@ -90,17 +90,17 @@ const customTheme = extendTheme({
       lineHeight: 1.375,
       fontWeight: 'semibold',
       fontSize: '1.125rem',
-      'blockquote &:first-child': {
+      'blockquote &:first-of-type': {
         mt: 0,
       },
     },
     a: {
-      'text-decoration': 'underline',
+      textDecoration: 'underline',
     },
     p: {
       mt: '1.25rem',
       lineHeight: 1.7,
-      'blockquote &:first-child': {
+      'blockquote &:first-of-type': {
         mt: 0,
       },
     },
