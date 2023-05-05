@@ -41,7 +41,7 @@ const Row = ({ publication }: { publication: Publication }) => (
       <P mt={0}>{publication.description}</P>
       {publication.action && (
         <Stack justifyContent="flex-end" isInline>
-          <A href={publication.action.url} mt="0.5rem" isExternal>
+          <A href={publication.action.url} mt="0.5rem">
             {publication.action.name} <ExternalLinkIcon />
           </A>
         </Stack>

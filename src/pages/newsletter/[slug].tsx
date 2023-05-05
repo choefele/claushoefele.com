@@ -1,10 +1,9 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { Box } from '@chakra-ui/react';
 import { serialize } from 'next-mdx-remote/serialize';
 import * as content from '../../components/content';
-import { A, P } from '../../components/content';
+import { A } from '../../components/content';
 import SubscribeBox from '../../components/subscribe-box';
 import { loadPost, loadPosts, Post } from '../../load-content-data';
 
