@@ -27,17 +27,6 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
         </P>
         <SubscribeBox message="Be the first to know." optedInEmail={email} />
         <H2>Latest Issues</H2>
-        {/* <Ul>
-          {posts.map((post) => {
-            return (
-              <Li key={post.filePath}>
-                <A href={`newsletter/${post.metadata.slug}`}>
-                  {post.metadata.title}
-                </A>
-              </Li>
-            );
-          })}
-        </Ul> */}
         <SimpleGrid
           as="ul"
           listStyleType="none"
