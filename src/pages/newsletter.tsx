@@ -26,12 +26,17 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
           at a time.
         </P>
         <P>
-          Remember how everyone wants you to read a million leadership books? And then read 10 more? I‘ve done that for you and I'm giving you the gist – in the form of a sketchnote.
-
-          Use the sketchnote as a time saver, a memory aid, and an inspiration. Then apply the concepts at work with practical activities.
+          Remember how everyone wants you to read a million leadership books?
+          And then read 10 more?
         </P>
-        <SubscribeBox message="Be the first to know." optedInEmail={email} />
-         
+        <P>
+          I‘ve done that for you and I‘m giving you the gist – in the form of a
+          sketchnote. Use the sketchnote as a time saver, a memory aid, and an
+          inspiration. Then apply the concepts at work with practical
+          activities.
+        </P>
+        <SubscribeBox optedInEmail={email} />
+
         <H2>Latest Issues</H2>
         <SimpleGrid
           as="ul"
