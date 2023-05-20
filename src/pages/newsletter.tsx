@@ -37,7 +37,7 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
         </P>
         <SubscribeBox optedInEmail={email} />
 
-        <H2>Latest Issues</H2>
+        <H2>Recent Issues</H2>
         <SimpleGrid
           as="ul"
           listStyleType="none"
