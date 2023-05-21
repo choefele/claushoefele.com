@@ -51,7 +51,7 @@ export default function Page({ mdxSource, post }: Props) {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content={`https://claushoefele.com/newsletter/${post.metadata.slug}`}
+          content={`https://claushoefele.com/d2l/${post.metadata.slug}`}
         />
         <meta property="og:image" content={post.metadata.image?.url} />
         <meta property="og:image:alt" content={post.metadata.image?.alt} />
@@ -61,7 +61,7 @@ export default function Page({ mdxSource, post }: Props) {
       </Head>
 
       <main>
-        <A href="../newsletter">{'<'} More articles...</A>
+        <A href="../d2l">{'<'} Recent issues...</A>
         <MDXRemote {...mdxSource} components={mdxComponents} />
         <SubscribeBox message="More of this?" />
       </main>

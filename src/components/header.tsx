@@ -18,7 +18,7 @@ import { FiMenu } from 'react-icons/fi';
 
 type Tab = { name: string; href: string };
 const tabs: Tab[] = [
-  { name: 'Drawn to Leadership ✍🏻', href: '/newsletter' },
+  { name: 'Drawn to Leadership ✍🏻', href: '/d2l' },
   // { name: 'Tools & Goodies', href: '/resources' },
   { name: 'Speaking & Writing', href: '/publications' },
   // { name: 'About', href: '/about' },

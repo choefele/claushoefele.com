@@ -7,7 +7,7 @@ const subscribeConfigs = new Map([
     {
       listId: 6, // Website
       templateId: 1, // Double Opt-In
-      redirectionUrl: 'https://claushoefele.com/newsletter',
+      redirectionUrl: 'https://claushoefele.com/d2l',
     },
   ],
 ]);

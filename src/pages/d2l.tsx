@@ -27,10 +27,10 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
         </P>
         <P>
           Remember how everyone wants you to read a million leadership books?
-          And then read 10 more?
+          And then 10 more?
         </P>
         <P>
-          I‘ve done that for you and I‘m giving you the gist – in the form of a
+          I‘ve done that for you, and I‘m giving you the gist – in the form of a
           sketchnote. Use the sketchnote as a time saver, a memory aid, and an
           inspiration. Then apply the concepts at work with practical
           activities.
@@ -50,7 +50,7 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
                 <A
                   textDecoration="none"
                   _hover={{ textDecoration: 'none' }}
-                  href={`newsletter/${post.metadata.slug}`}
+                  href={`d2l/${post.metadata.slug}`}
                 >
                   <ArticleCard {...post.metadata} />
                 </A>
