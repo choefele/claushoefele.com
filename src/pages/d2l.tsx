@@ -17,6 +17,38 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
     <>
       <Head>
         <title>Drawn to Leadership | Claus Höfele</title>
+        <meta
+          name="description"
+          content="Discover concepts and tools for engineering leaders – one sketchnote at a time. Written by Claus Höfele."
+        />
+        <meta name="author" content="Claus Höfele" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@claushoefele" />
+        <meta name="twitter:creator" content="@claushoefele" />
+        <meta
+          name="twitter:title"
+          content="Drawn to Leadership | Claus Höfele"
+        />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://claushoefele.com/d2l" />
+        <meta
+          property="og:image"
+          content="https://claushoefele.com/d2l/d2l-preview.jpg"
+        />
+        <meta property="og:image:alt" content="Drawn to Leadership Logo" />
+        <meta property="og:site_name" content="Claus Höfele" />
+        <meta
+          property="og:title"
+          content="Drawn to Leadership | Claus Höfele"
+        />
+        <meta
+          property="og:description"
+          content="Discover concepts and tools for engineering leaders – one sketchnote at a time. Written by Claus Höfele."
+        />
       </Head>
 
       <main>
@@ -24,16 +56,6 @@ export default function Newsletter({ posts }: { posts: Post[] }) {
         <P fontSize="lg" fontWeight="bold">
           Discover concepts and tools for engineering leaders – one sketchnote
           at a time.
-        </P>
-        <P>
-          Remember how everyone wants you to read a million leadership books?
-          And then 10 more?
-        </P>
-        <P>
-          I‘ve done that for you, and I‘m giving you the gist – in the form of a
-          sketchnote. Use the sketchnote as a time saver, a memory aid, and an
-          inspiration. Then apply the concepts at work with practical
-          activities.
         </P>
         <SubscribeBox optedInEmail={email} />
 
