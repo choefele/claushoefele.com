@@ -1,6 +1,36 @@
 ---
 - name: 'Speaking & Writing in 2023'
   publications:
+    - title: 'Talent.io CTO Afterwork – Shaping Engineering Organisations and Cross-functional teams'
+      date: '2022-09-28'
+      description: 'Jérémy Duval and the Talent.io team kindly invited me to their CTO Afterwork event. We discussed cross-functional teams with smart leaders like Sophie Davies-Patrick, Alex Fedorov, Oleksii Ishchenko, Ellen König, and Tiffany Conroy.'
+    - title: 'Engineer to Manager – About leadership and remote work culture'
+      date: '2022-09-02'
+      description: 'I have the utmost respect for Oleks, who’s working in Kyiv while still sharing his knowledge on how to become a good engineering manager.'
+      image:
+        alt: 'Engineer to Manager logo'
+        url: '/publications/engineer-to-manager.jpg'
+      action:
+        name: 'Watch on YouTube'
+        url: 'https://www.youtube.com/watch?v=klcmptzEbQU'
+    - title: 'Better Tech Leadership – Engineering Success'
+      date: '2022-09-12'
+      description: 'I met Matt at a cafe in Berlin for the podcast recording. Over a latte, I came to appreciate Matt’s curiosity. Yes, his Better Tech Leadership podcast is marketing. But I could tell he had a genuine interest in engaging with his guests to grow as a leader himself.'
+      image:
+        alt: 'Better Tech Leadership logo'
+        url: '/publications/better-tech-leadership.jpg'
+      action:
+        name: 'Listen on Spotify'
+        url: 'https://open.spotify.com/episode/3AJhtYiI7MQ3TpxuHQlZYD'
+    - title: 'Lets Talk Leadership: The Culture edit'
+      date: '2022-08-01'
+      description: 'Hosted by Transition Partners, in each episode, Sandra is joined by some of Europe’s greatest technology leaders.'
+      image:
+        alt: 'Transition Partners logo'
+        url: '/publications/transition-partners.jpeg'
+      action:
+        name: 'Listen on Spotify'
+        url: 'https://open.spotify.com/episode/1H3YPHzhHXoUJgSzBbYQEM'
     - title: 'Leaders in Tech – Retaining Talent @ Austin Fraser'
       date: '2022-02-09'
       description: 'I worked with Katarina and Austin Fraser on the hard-to-fill positions for our ERP systems development. They also organize regular networking events in their fab office near Berlin Zoological Garden. This time, I’m part of a round table discussion on retaining talent.'
@@ -28,18 +58,12 @@
     - title: 'Achieve your goals with Tiny Habits and WOOP'
       date: '2022-08-30'
       description: 'Boris, Marcus, and I are all trained as Tiny Habits coaches (a pragmatic approach to establish good habits). In this collaboration, we explore how you might combine this method with WOOP (a goal setting method developed by Gabriele Oettingen).'
-      image:
-        alt: 'Article'
-        url: '/publications/file-earmark-text.svg'
       action:
         name: 'Read on the Tiny Habits blog'
         url: 'https://tinyhabitsacademy.com/achieve-your-goals-with-tiny-habits-and-woop/'
     - title: 'Agile Review - Special Guest: Claus Höfele'
       date: '2022-08-01'
       description: 'I was really amazed when Ennis sent me a conch shell after the recording. Agile teams will sometimes choose a symbolic conch shell, which is passed around as a sign who is entitled to speak without interruption. (It’s also a reference to the book Lord of the Flies.) What a wonderful souvenir.'
-      image:
-        alt: 'Presentation'
-        url: '/publications/play-btn.svg'
       action:
         name: 'Watch on YouTube'
         url: 'https://youtu.be/gpTTMLMk5_Q'
@@ -67,9 +91,6 @@
     - title: 'Server-Side Swift (iOSDevUK 7)'
       date: '2017-09-05'
       description: 'Aberystwyth (Wales) is well worth a visit just for the seafront location. Lucky for me, I also joined this iOS-focused conference (the longest running iOS conference in the world) for its 7th incarnation to talk about using Swift for server-side development.'
-      image:
-        alt: 'Presentation'
-        url: '/publications/easel.svg'
       action:
         name: 'Read slides on Speaker Deck'
         url: 'https://speakerdeck.com/choefele/server-side-swift-iosdevuk-7'
@@ -85,9 +106,6 @@
     - title: 'Ok Festival 2014: Usability Testing Workshop'
       date: '2014-07-18'
       description: 'As an engineer, I found usability testing incredibly useful to figure out how to improve the apps I helped to develop. In this workshop, Lydia and I shared our process (based on Steve Krug’s wonderful books).'
-      image:
-        alt: 'Presentation'
-        url: '/publications/easel.svg'
       action:
         name: 'Read slides on SlideShare'
         url: 'https://www.slideshare.net/choefele/ok-festival-2014-usability-testing-workshop'
@@ -103,15 +121,12 @@
     - title: 'Patents'
       date: '2007-10-16'
       description: 'During my time at Sony Ericsson in Germany and Japan, I invented two patents for mobile systems and UI software (JP2007280175, EP1452965).'
-      image:
-        alt: 'Patent'
-        url: '/publications/file-earmark-text.svg'
     - title: 'Mobile 3D Graphics and other books'
       date: '2007-03-01'
       description: 'In addition to authoring Mobile 3D Graphics (Cengage Learning PTR), I also co-authored More iPhone Cool Projects (Apress) and Game Programming Gems 8 (Cengage Learning PTR). Those were the times when I focused my work on devices with limited processing power such as mobile phones and game consoles.'
       image:
         alt: 'Claus’ book about mobile 3D graphics'
-        url: '/publications/51uWqpvuOmL._SX402_BO1,204,203,200_.jpg'
+        url: '/publications/mobile-3d-graphics.jpg'
       action:
         name: 'Claus’ author page on Amazon'
         url: 'https://www.amazon.com/stores/Claus-Höfele/author/B001JP7TCC'
