@@ -1,11 +1,32 @@
 ---
+- name: 'Speaking & Writing in 2024'
+  publications:
+    - title: 'CTO Craft Con Berlin – Facilitation: A Superpower for Engineering Leaders'
+      date: '2024-09-25'
+      description: "It's been a while since I've spoken at a conference - so I was delighted that my talk at the inaugural CTO Craft Con Berlin went down so well. And the talk allowed me to raise my game with storytelling and interactive presentation formats."
+      image:
+        alt: 'CTO Craft logo'
+        url: '/publications/cto_craft.jpeg'
+      action:
+        name: 'Watch on YouTube'
+        url: 'https://www.youtube.com/watch?v=gDqqUnmRRzQ&t=1s'
+    - title: 'DigiTech – S1 EP4 Lightning Talks With Technical Leaders'
+      date: '2024-04-08'
+      description: "I've worked with Paul on several roles. He and his company are ace at finding top talent. So I was happy to join him on his podcast to talk about my career journey and approach to hiring."
+      image:
+        alt: 'DigiTech logo'
+        url: '/publications/digitech.jpg'
+      action:
+        name: 'Watch on YouTube'
+        url: 'https://www.youtube.com/watch?v=-6HKgvJCgw8'
+
 - name: 'Speaking & Writing in 2023'
   publications:
     - title: 'Talent.io CTO Afterwork – Shaping Engineering Organisations and Cross-functional teams'
-      date: '2022-09-28'
+      date: '2023-09-28'
       description: 'Jérémy Duval and the Talent.io team kindly invited me to their CTO Afterwork event. We discussed cross-functional teams with smart leaders like Sophie Davies-Patrick, Alex Fedorov, Oleksii Ishchenko, Ellen König, and Tiffany Conroy.'
     - title: 'Engineer to Manager – About leadership and remote work culture'
-      date: '2022-09-02'
+      date: '2023-09-02'
       description: 'I have the utmost respect for Oleks, who’s working in Kyiv while still sharing his knowledge on how to become a good engineering manager.'
       image:
         alt: 'Engineer to Manager logo'
@@ -14,7 +35,7 @@
         name: 'Watch on YouTube'
         url: 'https://www.youtube.com/watch?v=klcmptzEbQU'
     - title: 'Better Tech Leadership – Engineering Success'
-      date: '2022-09-12'
+      date: '2023-09-12'
       description: 'I met Matt at a cafe in Berlin for the podcast recording. Over a latte, I came to appreciate Matt’s curiosity. Yes, his Better Tech Leadership podcast is marketing. But I could tell he had a genuine interest in engaging with his guests to grow as a leader himself.'
       image:
         alt: 'Better Tech Leadership logo'
@@ -23,7 +44,7 @@
         name: 'Listen on Spotify'
         url: 'https://open.spotify.com/episode/3AJhtYiI7MQ3TpxuHQlZYD'
     - title: 'Lets Talk Leadership: The Culture edit'
-      date: '2022-08-01'
+      date: '2023-08-01'
       description: 'Hosted by Transition Partners, in each episode, Sandra is joined by some of Europe’s greatest technology leaders.'
       image:
         alt: 'Transition Partners logo'
@@ -32,7 +53,7 @@
         name: 'Listen on Spotify'
         url: 'https://open.spotify.com/episode/1H3YPHzhHXoUJgSzBbYQEM'
     - title: 'Leaders in Tech – Retaining Talent @ Austin Fraser'
-      date: '2022-02-09'
+      date: '2023-02-09'
       description: 'I worked with Katarina and Austin Fraser on the hard-to-fill positions for our ERP systems development. They also organize regular networking events in their fab office near Berlin Zoological Garden. This time, I’m part of a round table discussion on retaining talent.'
       image:
         alt: 'Leaders in Tech logo'
@@ -45,7 +66,7 @@
       description: 'In addition to their Slack group, the CTO Craft community also hosts regular lunch events. I had the pleasure to present my views on the best hiring processes that also improve your reputation in the job market.'
       image:
         alt: 'CTO Craft logo'
-        url: '/publications/1579535767314.jpeg'
+        url: '/publications/cto_craft.jpeg'
     - title: 'School of Hiring - How To Become Better At Hiring with Claus Höfele'
       date: '2022-11-28'
       description: 'Konstanty is a respected teacher of great hiring practices and the host of School of Hiring. We talk about how you as a engineering leader can help improve your company’s hiring practices.'
